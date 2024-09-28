@@ -22,7 +22,6 @@ export default function Projects() {
         repository: "https://github.com/nayarakarinearaujo/itamar.eletrohelp",
       },
     },
-    // Adicione mais projetos aqui
   ];
 
   return (

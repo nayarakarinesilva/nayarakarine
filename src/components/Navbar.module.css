@@ -9,13 +9,11 @@
   background-color: #f8f8f8;
 }
 
-/* Estilo para a imagem na Navbar */
 .navbar img {
   width: 80px;
   margin-right: 2em;
 }
 
-/* Estilo para a lista na Navbar */
 .navbar ul {
   display: flex;
   justify-content: flex-end;
@@ -24,14 +22,12 @@
   gap: 2em;
 }
 
-/* Estilo para os itens da lista */
 .navbar ul li {
   list-style: none;
   display: flex;
   align-items: center;
 }
 
-/* Estilo para os links da lista */
 .navbar ul li a {
   font-weight: 600;
   text-decoration: none;
@@ -40,7 +36,38 @@
   cursor: pointer;
 }
 
-/* Efeito hover para os links */
 .navbar ul li a:hover {
   text-decoration: underline;
+}
+
+/* Estilos para o menu hamburguer */
+.menuToggle {
+  display: none; /* Esconde o botão por padrão */
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: #910a67;
+  cursor: pointer;
+}
+
+/* Media Queries para Responsividade */
+@media (max-width: 768px) {
+  .navbar {
+    justify-content: space-between; /* Mantenha o espaço entre os elementos */
+  }
+
+  .navbar ul {
+    display: none; /* Esconde a lista inicialmente */
+    flex-direction: column; 
+    width: 100%; 
+    padding: 0; 
+  }
+
+  .navbar ul.open {
+    display: flex;
+  }
+
+  .menuToggle {
+    display: block; 
+  }
 }

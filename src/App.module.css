@@ -9,3 +9,22 @@ body {
 .App {
   text-align: center;
 }
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .App {
+    padding: 10px; /* Reduza o padding em telas menores */
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    font-size: 14px; /* Reduz o tamanho da fonte em telas menores */
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    font-size: 12px; /* Tamanho ainda menor para dispositivos muito pequenos */
+  }
+}

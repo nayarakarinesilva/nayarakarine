@@ -1,5 +1,8 @@
 import styles from "./About.module.css";
 import Image from "./foto-nayara-moldura-redonda-png.png";
+import ImageNetwork from "../assets/ImageNetwork";
+import 'bootstrap-icons/font/bootstrap-icons.css';
+
 
 export default function About() {
   return (
@@ -19,9 +22,42 @@ export default function About() {
             projeto?
           </p>
         </section>
+
         <section>
           <img src={Image} alt="Foto da Nayara Karine" />
         </section>
+
+        <section className={styles.about_container_links}>
+  <h2>Acesse minhas redes:</h2>
+
+  <div className={styles.link}>
+    <a href="" aria-label="GitHub">
+      <i className="bi bi-github"></i>
+    </a>
+    <span>GitHub</span>
+  </div>
+
+  <div className={styles.link}>
+    <a href="" aria-label="LinkedIn">
+      <i className="bi bi-linkedin"></i>
+    </a>
+    <span>LinkedIn</span>
+  </div>
+
+  <div className={styles.link}>
+    <a href="" aria-label="Instagram">
+      <i className="bi bi-instagram"></i>
+    </a>
+    <span>Instagram</span>
+  </div>
+</section>
+
+
+
+
+
+
+
       </main>
     </div>
   );

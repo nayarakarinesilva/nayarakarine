@@ -1,8 +1,10 @@
 // components/Navbar.js
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import styles from "./Navbar.module.css";
 
 function Navbar() {
+  const [isOpen, setIsOpen] = useState(false);
+
   useEffect(() => {
     function initScrollSoft() {
       const internalLinks = document.querySelectorAll('.js-menu a[href^="#"]');
@@ -36,23 +38,22 @@ function Navbar() {
 
   return (
     <nav className={`${styles.navbar} js-menu`}>
-      <ul>
+      <button className={styles.menuToggle} onClick={() => setIsOpen(!isOpen)}>
+        ☰
+      </button>
+      <ul className={`${isOpen ? styles.open : styles.closed}`}>
         <li>
           <a href="#home">Home</a>
         </li>
-
         <li>
           <a href="#skills">Habilidades</a>
         </li>
-
         <li>
           <a href="#projects">Projetos</a>
         </li>
-
         <li>
           <a href="#experiences">Experiências</a>
         </li>
-
         <li>
           <a href="#contact">Contato</a>
         </li>
