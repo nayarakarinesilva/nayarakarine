@@ -38,11 +38,13 @@
 
 .navbar ul li a:hover {
   text-decoration: underline;
+  transform: scale(1.1);
+  transform: translateY(-2px);
 }
 
 /* Estilos para o menu hamburguer */
 .menuToggle {
-  display: none; /* Esconde o botão por padrão */
+  display: none; 
   background: none;
   border: none;
   font-size: 1.5rem;
@@ -53,11 +55,11 @@
 /* Media Queries para Responsividade */
 @media (max-width: 768px) {
   .navbar {
-    justify-content: space-between; /* Mantenha o espaço entre os elementos */
+    justify-content: space-between; 
   }
 
   .navbar ul {
-    display: none; /* Esconde a lista inicialmente */
+    display: none; 
     flex-direction: column; 
     width: 100%; 
     padding: 0; 
