@@ -93,17 +93,8 @@
         "title": "Conversor de Moedas",
         "description": "Projeto em PHP que converte valores de reais (BRL) para dólares americanos (USD) utilizando a API do Banco do Brasil para obter a cotação do dólar.",
         "links": {
-          "project": "https://link-para-o-projeto-conversor.com",
+          "project": "",
           "repository": "https://github.com/nayarakarinearaujo/ConversorDeMoedas"
-        }
-      },
-      {
-        "id": "fullstack-gestaoChamados",
-        "title": "Sistema de Gestão de Chamados Técnicos",
-        "description": "Sistema completo para gestão de chamados técnicos, permitindo registro, priorização e gestão de solicitações de suporte.",
-        "links": {
-          "project": "https://link-para-o-projeto-chamados.com",
-          "repository": "https://github.com/seuusuario/gestao-chamados"
         }
       },
       {
@@ -111,8 +102,7 @@
         "title": "Sistema para Gerenciamento de Chamados Técnicos",
         "description": "Simula um sistema para gerenciamento de chamados técnicos em informática, com interface e rotas entre usuários e técnicos.",
         "links": {
-          "project": "https://link-para-o-sistema-chamados.com",
-          "repository": "https://github.com/seuusuario/sistema-chamados"
+          "repository": "https://github.com/nayarakarinearaujo/portal_tech"
         }
       }
     ]

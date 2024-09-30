@@ -8,8 +8,8 @@ export default function Contact() {
       <section>
         <h2>Entre em Contato</h2>
         <p>
-          Estou disponível para novos projetos e oportunidades. Sinta-se à
-          vontade para entrar em contato comigo!
+        Estou disponível para novos projetos e oportunidades. Sinta-se à
+        vontade para entrar em contato comigo!
         </p>
         <form
           id="contact-form"
@@ -36,7 +36,7 @@ export default function Contact() {
             placeholder="Sua Mensagem"
             required
           ></textarea>
-          <button type="submit" onclick="sendEmail(event)">
+          <button type="submit" onClick="sendEmail(event)">
             Enviar Mensagem
           </button>
         </form>

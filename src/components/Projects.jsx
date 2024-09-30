@@ -1,16 +1,63 @@
-import React, { useState } from "react";
-import styles from "./Projects.module.css";
+import React from "react";
+import projectsData from "../ProjectsData.json";
+import styles from "./Projects.module.css"; // se você estiver usando CSS
 
 export default function Projects() {
- 
+  const projectsFront = projectsData.projects.front; 
+  const projectsBack = projectsData.projects.back;
+  const projectsFullstack = projectsData.projects.fullstack;
+
 
   return (
     <div className={styles.projects_container}>
       <h1>Projetos</h1>
-      <section id="front-end">
+
+      <section id="front">
         <h2>Projetos de Front-end</h2>
         <div className={styles.projects_grid}>
-          {projects.map((project) => (
+          {projectsFront.map((project) => (
+            <div key={project.id} className={styles.project_card}>
+              <h3>{project.title}</h3>
+              <p>{project.description}</p>
+              <div className={styles.project_links}>
+                <a href={project.links.project} target="_blank" rel="noopener noreferrer">
+                  Ver Projeto
+                </a>
+                <span> | </span>
+                <a href={project.links.repository} target="_blank" rel="noopener noreferrer">
+                  Ver Repositório
+                </a>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section id="back">
+        <h2>Projetos de Back-end</h2>
+        <div className={styles.projects_grid}>
+          {projectsBack.map((project) => (
+            <div key={project.id} className={styles.project_card}>
+              <h3>{project.title}</h3>
+              <p>{project.description}</p>
+              <div className={styles.project_links}>
+                <a href={project.links.project} target="_blank" rel="noopener noreferrer">
+                  Ver Projeto
+                </a>
+                <span> | </span>
+                <a href={project.links.repository} target="_blank" rel="noopener noreferrer">
+                  Ver Repositório
+                </a>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section id="fullstack">
+        <h2>Projetos de FullStack</h2>
+        <div className={styles.projects_grid}>
+          {projectsFullstack.map((project) => (
             <div key={project.id} className={styles.project_card}>
               <h3>{project.title}</h3>
               <p>{project.description}</p>
