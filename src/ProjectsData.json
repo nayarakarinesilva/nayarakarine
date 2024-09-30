@@ -24,8 +24,8 @@
         "title": "Aplicação de Magias de Dungeons & Dragons",
         "description": "Explora e filtra magias da API de D&D 5ª edição. Interface responsiva e estilizada.",
         "links": {
-          "project": "https://link-para-a-demo.com",
-          "repository": "https://github.com/seuusuario/dnd-spell-app"
+          "project": "https://spellbook-silk.vercel.app/",
+          "repository": "https://github.com/nayarakarinearaujo/SpellBook"
         }
       },
       {
@@ -33,8 +33,8 @@
         "title": "Calculadora de IMC",
         "description": "Calcula o Índice de Massa Corporal (IMC) com feedback sobre a classificação.",
         "links": {
-          "project": "https://link-para-a-demo.com",
-          "repository": "https://github.com/seuusuario/imc-calculator"
+          "project": "https://calculadora-imc-livid-two.vercel.app/",
+          "repository": "https://github.com/nayarakarinearaujo/CalculadoraIMC"
         }
       },
       {
@@ -42,8 +42,8 @@
         "title": "Lista de Tarefas 📋",
         "description": "Aplicação web para gerenciar tarefas com funcionalidades de adicionar, completar, remover, filtrar, pesquisar e ordenar.",
         "links": {
-          "project": "https://link-para-a-demo.com",
-          "repository": "https://github.com/seuusuario/task-list"
+          "project": "https://nayarakarinearaujo.github.io/TodoListReact/",
+          "repository": "https://github.com/nayarakarinearaujo/TodoListReact"
         }
       },
       {
@@ -51,8 +51,8 @@
         "title": "Jogo do Número Secreto",
         "description": "Um jogo interativo onde o usuário deve adivinhar um número gerado aleatoriamente pelo sistema.",
         "links": {
-          "project": "https://link-para-o-jogo.com",
-          "repository": "https://github.com/seuusuario/jogo-numero-secreto"
+          "project": "https://jogo-five-dun.vercel.app/",
+          "repository": "https://github.com/nayarakarinearaujo/jogo-do-numero-secreto"
         }
       },
       {
@@ -60,8 +60,8 @@
         "title": "Decodificador de Texto",
         "description": "Aplicação que permite codificar e decodificar mensagens utilizando técnicas simples de transformação de texto.",
         "links": {
-          "project": "https://link-para-o-decodificador.com",
-          "repository": "https://github.com/seuusuario/decodificador-texto"
+          "project": "https://challenge-one-01.vercel.app/",
+          "repository": "https://github.com/nayarakarinearaujo/challenge-one-01/blob/main/README.md"
         }
       }
     ],
@@ -72,8 +72,8 @@
         "title": "Aplicação Pizzaria com Spring Boot",
         "description": "Aplicação web que permite realizar operações CRUD em entidades relacionadas a uma pizzaria, usando Spring Boot e um modelo ER.",
         "links": {
-          "project": "https://link-para-o-projeto-pizzaria.com",
-          "repository": "https://github.com/seuusuario/projeto-pizzaria"
+          "project": "",
+          "repository": "https://github.com/nayarakarinearaujo/pizzaria-api"
         }
       },
       {
@@ -81,8 +81,9 @@
         "title": "Microservices na Prática",
         "description": "Desenvolvimento de microservices com Spring Boot, incluindo user-microservice e email-microservice, utilizando RabbitMQ para comunicação assíncrona.",
         "links": {
-          "project": "https://link-para-o-projeto-microservices.com",
-          "repository": "https://github.com/seuusuario/microservices-pratica"
+          "project": "",
+          "repository": "https://github.com/nayarakarinearaujo/msEmail",
+          "repository1": "https://github.com/nayarakarinearaujo/msUser"
         }
       }
     ],
@@ -102,6 +103,7 @@
         "title": "Sistema para Gerenciamento de Chamados Técnicos",
         "description": "Simula um sistema para gerenciamento de chamados técnicos em informática, com interface e rotas entre usuários e técnicos.",
         "links": {
+          "project": "",
           "repository": "https://github.com/nayarakarinearaujo/portal_tech"
         }
       }
