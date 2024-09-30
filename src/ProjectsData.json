@@ -39,7 +39,7 @@
       },
       {
         "id": "front-taskList",
-        "title": "Lista de Tarefas 📋",
+        "title": "Lista de Tarefas",
         "description": "Aplicação web para gerenciar tarefas com funcionalidades de adicionar, completar, remover, filtrar, pesquisar e ordenar.",
         "links": {
           "project": "https://nayarakarinearaujo.github.io/TodoListReact/",
