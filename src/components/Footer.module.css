@@ -5,6 +5,7 @@
   padding: 1px;
   background-color: #f8f8f8;
   color: #333;
+  border-radius: 0px 0px 5px 5px;
 }
 
 .footer_container a {
