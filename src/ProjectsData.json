@@ -1,0 +1,112 @@
+{
+  "projects": {
+    "front": [
+      {
+        "id": "front-piscinas",
+        "title": "Landing Page - Tratador de Piscinas",
+        "description": "Site para promover serviços de manutenção de piscinas.",
+        "links": {
+          "project": "https://www.gjpiscinaesaude.com.br/",
+          "repository": "https://github.com/nayarakarinearaujo/gj.piscinaesaude"
+        }
+      },
+      {
+        "id": "front-tecnico",
+        "title": "Landing Page - Técnico de Eletrodoméstico",
+        "description": "Site para uma empresa especializada em conserto e vendas de eletrodomésticos.",
+        "links": {
+          "project": "https://itamar-eletrohelp.vercel.app/",
+          "repository": "https://github.com/nayarakarinearaujo/itamar.eletrohelp"
+        }
+      },
+      {
+        "id": "front-dndSpellApp",
+        "title": "Aplicação de Magias de Dungeons & Dragons",
+        "description": "Explora e filtra magias da API de D&D 5ª edição. Interface responsiva e estilizada.",
+        "links": {
+          "project": "https://spellbook-silk.vercel.app/",
+          "repository": "https://github.com/nayarakarinearaujo/SpellBook"
+        }
+      },
+      {
+        "id": "front-imcCalculator",
+        "title": "Calculadora de IMC",
+        "description": "Calcula o Índice de Massa Corporal (IMC) com feedback sobre a classificação.",
+        "links": {
+          "project": "https://calculadora-imc-livid-two.vercel.app/",
+          "repository": "https://github.com/nayarakarinearaujo/CalculadoraIMC"
+        }
+      },
+      {
+        "id": "front-taskList",
+        "title": "Lista de Tarefas",
+        "description": "Aplicação web para gerenciar tarefas com funcionalidades de adicionar, completar, remover, filtrar, pesquisar e ordenar.",
+        "links": {
+          "project": "https://nayarakarinearaujo.github.io/TodoListReact/",
+          "repository": "https://github.com/nayarakarinearaujo/TodoListReact"
+        }
+      },
+      {
+        "id": "front-numeroSecreto",
+        "title": "Jogo do Número Secreto",
+        "description": "Um jogo interativo onde o usuário deve adivinhar um número gerado aleatoriamente pelo sistema.",
+        "links": {
+          "project": "https://jogo-five-dun.vercel.app/",
+          "repository": "https://github.com/nayarakarinearaujo/jogo-do-numero-secreto"
+        }
+      },
+      {
+        "id": "front-decodificadorTexto",
+        "title": "Decodificador de Texto",
+        "description": "Aplicação que permite codificar e decodificar mensagens utilizando técnicas simples de transformação de texto.",
+        "links": {
+          "project": "https://challenge-one-01.vercel.app/",
+          "repository": "https://github.com/nayarakarinearaujo/challenge-one-01/blob/main/README.md"
+        }
+      }
+    ],
+
+    "back": [
+      {
+        "id": "back-api-pizzaria",
+        "title": "Aplicação Pizzaria com Spring Boot",
+        "description": "Aplicação web que permite realizar operações CRUD em entidades relacionadas a uma pizzaria, usando Spring Boot e um modelo ER.",
+        "links": {
+          "project": "",
+          "repository": "https://github.com/nayarakarinearaujo/pizzaria-api"
+        }
+      },
+      {
+        "id": "back-api-microservices",
+        "title": "Microservices na Prática",
+        "description": "Desenvolvimento de microservices com Spring Boot, incluindo user-microservice e email-microservice, utilizando RabbitMQ para comunicação assíncrona.",
+        "links": {
+          "project": "",
+          "repository": "https://github.com/nayarakarinearaujo/msEmail",
+          "repository1": "https://github.com/nayarakarinearaujo/msUser"
+        }
+      }
+    ],
+
+    "fullstack": [
+      {
+        "id": "fullstack-conversorPhp",
+        "title": "Conversor de Moedas",
+        "description": "Projeto em PHP que converte valores de reais (BRL) para dólares americanos (USD) utilizando a API do Banco do Brasil para obter a cotação do dólar.",
+        "links": {
+          "project": "",
+          "repository": "https://github.com/nayarakarinearaujo/ConversorDeMoedas"
+        }
+      },
+      {
+        "id": "fullstack-sistemaChamados",
+        "title": "Sistema para Gerenciamento de Chamados Técnicos",
+        "description": "Simula um sistema para gerenciamento de chamados técnicos em informática, com interface e rotas entre usuários e técnicos.",
+        "links": {
+          "project": "",
+          "repository": "https://github.com/nayarakarinearaujo/portal_tech"
+        }
+      }
+    ]
+  }
+}

@@ -1,3 +1,5 @@
+
+
 .projects_container {
   font-family: Arial, Helvetica, sans-serif;
   color: #333;
@@ -5,23 +7,30 @@
 }
 
 .projects_container h1 {
-  font-size: 2rem;
+  font-size: 2.2rem;
   color: #7eacb5;
   text-align: center;
-  margin-bottom: 20px; /* Espaçamento abaixo do título principal */
+  margin-bottom: 20px; 
 }
 
 .projects_container h2 {
-  margin: 20px 0 10px 10px; /* Ajuste nas margens para uniformidade */
-  font-weight: 600;
-  font-size: 1.5rem;
+  text-align: center;
   color: #910a67;
+  background: linear-gradient(
+    135deg,
+    rgba(232, 189, 171, 0.5),
+    rgba(212, 171, 199, 0.5),
+    rgba(156, 192, 209, 0.5),
+    rgba(126, 172, 181, 0.5)
+  );
+  padding: 8px;
+  border-radius: 6px;
 }
 
 .projects_grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); /* Ajuste para colunas um pouco menores */
-  gap: 15px; /* Espaçamento reduzido entre os cartões */
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); 
+  gap: 15px;
 }
 
 .project_card {
@@ -30,29 +39,38 @@
   box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
   overflow: hidden;
   cursor: pointer;
-  transition: transform 0.2s, box-shadow 0.2s; /* Adicionando transição ao box-shadow */
-  padding: 15px; /* Adiciona espaço interno ao cartão */
+  transition: transform 0.2s, box-shadow 0.2s; 
+  padding: 15px; 
 
 }
 
 .project_card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Sombra mais forte ao passar o mouse */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); 
 }
 
-.project_image {
-  width: 100%;
-  height: auto;
+.project_card h3 {
+  color: #A66589;
+}
+
+.project_card a {
+text-decoration: none;
+color: #7eacb5;
+}
+
+.project_card a:hover {
+  color: #2a8d8e; 
+  text-decoration: underline; 
 }
 
 .project_info {
   padding: 15px;
-  text-align: center; /* Centralizando o texto para um visual mais limpo */
+  text-align: center; 
 }
 
 .project_details {
   padding: 15px;
   background-color: #f9f9f9;
   border-top: 1px solid #eee;
-  border-radius: 0 0 8px 8px; /* Arredondar os cantos inferiores do detalhe */
+  border-radius: 0 0 8px 8px; 
 }

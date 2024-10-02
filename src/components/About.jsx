@@ -1,6 +1,5 @@
 import styles from "./About.module.css";
 import Image from "./foto-nayara-moldura-redonda-png.png";
-import ImageNetwork from "../assets/ImageNetwork";
 import 'bootstrap-icons/font/bootstrap-icons.css';
 
 
@@ -28,36 +27,31 @@ export default function About() {
         </section>
 
         <section className={styles.about_container_links}>
-  <h2>Acesse minhas redes:</h2>
+          <h2>Acesse minhas redes:</h2>
 
-  <div className={styles.link}>
-    <a href="" aria-label="GitHub">
-      <i className="bi bi-github"></i>
-    </a>
-    <span>GitHub</span>
-  </div>
+          <div className={styles.link}>
+            <a href="https://github.com/nayarakarinearaujo" aria-label="GitHub" target="blanck">
+              <i className="bi bi-github"></i>
+              <span>GitHub</span>
+            </a>
+          </div>
 
-  <div className={styles.link}>
-    <a href="" aria-label="LinkedIn">
-      <i className="bi bi-linkedin"></i>
-    </a>
-    <span>LinkedIn</span>
-  </div>
+          <div className={styles.link}>
+            <a href="https://www.linkedin.com/in/nayarakarine-araujo/" aria-label="LinkedIn" target="blanck">
+              <i className="bi bi-linkedin"></i>
+              <span>LinkedIn</span>
+            </a>
 
-  <div className={styles.link}>
-    <a href="" aria-label="Instagram">
-      <i className="bi bi-instagram"></i>
-    </a>
-    <span>Instagram</span>
-  </div>
-</section>
+          </div>
 
+          <div className={styles.link}>
+            <a href="https://www.instagram.com/nayarakarine.araujo/" aria-label="Instagram" target="blanck">
+              <i className="bi bi-instagram"></i>
+              <span>Instagram</span>
 
-
-
-
-
-
+            </a>
+          </div>
+        </section>
       </main>
     </div>
   );

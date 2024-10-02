@@ -1,6 +1,7 @@
 // components/Navbar.js
 import React, { useEffect, useState } from "react";
 import styles from "./Navbar.module.css";
+import Logo from "../assets/logo.png"
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -20,6 +21,8 @@ function Navbar() {
             block: "start",
           });
         }
+
+        setIsOpen(false);
       }
 
       internalLinks.forEach((link) => {
@@ -38,9 +41,15 @@ function Navbar() {
 
   return (
     <nav className={`${styles.navbar} js-menu`}>
-      <button className={styles.menuToggle} onClick={() => setIsOpen(!isOpen)}>
-        ☰
-      </button>
+      
+      {!isOpen && <img src={Logo} alt="Logo" />}
+      
+      {/* O botão só é exibido se o menu não estiver aberto */}
+      {!isOpen && (
+        <button className={styles.menuToggle} onClick={() => setIsOpen(!isOpen)}>
+          ☰ {/* Ícone de menu */}
+        </button>
+      )}
       <ul className={`${isOpen ? styles.open : styles.closed}`}>
         <li>
           <a href="#home">Home</a>
