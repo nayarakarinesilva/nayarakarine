@@ -12,7 +12,7 @@ function Experiences() {
           <ul>
             <li>
               AgBe Soluções LTDA, Campinas -SP – Desenvolvedora Ful Stack -
-              Júnior - ABRIL DE 2024 – ATUAL.
+              Júnior - ABRIL DE 2024 – SETEMBRO DE 2024.
             </li>
             <li>
               Ritnner Odontologia, Campinas – SP - Auxiliar de Saúde Bucal MAIO
