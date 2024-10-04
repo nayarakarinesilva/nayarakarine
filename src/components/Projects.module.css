@@ -74,3 +74,7 @@ color: #7eacb5;
   border-top: 1px solid #eee;
   border-radius: 0 0 8px 8px; 
 }
+
+.project_card img {
+width: 100%;
+}
