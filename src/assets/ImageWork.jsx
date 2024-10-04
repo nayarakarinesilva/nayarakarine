@@ -5,7 +5,7 @@ import CalculadoraImc from './imageWork/CalculadoraIMC.png';
 import TodoList from './imageWork/TodoListReact.png';
 import JogoNSecreto from './imageWork/jogo-n-secreto.png';
 import Decodificador from './imageWork/decodificador.png';
-import ConversorMoedas from './imageWork/'
+import ConversorMoedas from './imageWork/conversorMoedas.png';
 import PortalTech from './imageWork/img-portaltech.jpg';
 
 const ImagesWork = {
@@ -16,6 +16,7 @@ const ImagesWork = {
     "front-taskList": TodoList,
     "front-numeroSecreto": JogoNSecreto,
     "front-decodificadorTexto": Decodificador,
+    "fullstack-conversorPhp": ConversorMoedas,
     "fullstack-sistemaChamados": PortalTech,
 };
 
