@@ -5,11 +5,19 @@
   margin-bottom: 10px;
 }
 
+.experiences_container section {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .experiences_container h1 {
   font-size: 2.2rem;
   color: #7eacb5;
   text-align: center;
-  margin-bottom: 20px; 
+  margin-bottom: 20px;
 }
 
 .experiences_container h2 {
@@ -18,8 +26,6 @@
 }
 
 .experiences_container ul {
-  padding: 0;
-  margin: 10px 10px;
   margin-top: 20px;
   list-style-type: disc;
 }
@@ -31,6 +37,5 @@
 .experiences_container ul li {
   padding: 5px 10px;
   border-radius: 5px;
-  margin-left: 10px;
   font-size: 0.9rem;
 }

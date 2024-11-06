@@ -8,11 +8,12 @@ function Experiences() {
       <section>
         <div>
           <h2>EXPERIÊNCIA PROFISSIONAL</h2>
-
           <ul>
+          <li>
+              ProBrain, Sorocaba -SP – Estágio em Front-End - OUTUBRO DE 2024 – ATUAL.
+            </li>
             <li>
-              AgBe Soluções LTDA, Campinas -SP – Desenvolvedora Ful Stack -
-              Júnior - ABRIL DE 2024 – SETEMBRO DE 2024.
+              AgBe Soluções LTDA, Campinas -SP – Estágio em Full Stack - ABRIL DE 2024 – SETEMBRO DE 2024.
             </li>
             <li>
               Ritnner Odontologia, Campinas – SP - Auxiliar de Saúde Bucal MAIO
@@ -24,12 +25,11 @@ function Experiences() {
             </li>
           </ul>
         </div>
-
-        <div>
+         <div>
           <h2>ATIVIDADES EXTRACURRICULARES</h2>
           <ul>
             <li>
-              Curso: JavaScript / HTML5/ CSS3/ Java – Curso em Vídeo – AGOSTO
+              Curso: JavaScriFt / HTML5/ CSS3/ Java – Curso em Vídeo – AGOSTO
               2023.
             </li>
 
@@ -42,11 +42,13 @@ function Experiences() {
 
             <li>Curso Fron-End - Origamid - 2024</li>
 
-            <li>Curso Vue.Js - Origamid - 2024</li>
+            <li>Curso React.Js - Origamid - 2024</li>
+
+            <li>Curso Figma - Origamid - 2024</li>
 
             <li>Curso Figma - Sujeito Programador - 2024</li>
           </ul>
-        </div>
+        </div> 
       </section>
     </div>
   );
