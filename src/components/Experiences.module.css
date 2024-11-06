@@ -31,7 +31,7 @@
 }
 
 .experiences_container ul li::marker {
-  color: #7eacb5; /* Define a cor do marcador da lista */
+  color: #7eacb5; 
 }
 
 .experiences_container ul li {
