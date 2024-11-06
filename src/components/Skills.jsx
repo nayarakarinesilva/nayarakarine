@@ -5,6 +5,7 @@ import Images from "../assets/ImageSkills";
 export default function Skills() {
   return (
     <div className={styles.skills}>
+      
       <h1>Habilidades</h1>
 
       <main className={styles.skills_container}>
