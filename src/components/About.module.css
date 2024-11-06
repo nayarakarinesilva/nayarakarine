@@ -111,7 +111,6 @@
 @media (min-width: 768px) {
   .about_container main {
     grid-template-columns: 1fr 2fr;
-    /* Duas colunas para telas médias */
   }
 }
 
