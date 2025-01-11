@@ -3,52 +3,65 @@ import styles from "./Experiences.module.css";
 function Experiences() {
   return (
     <div className={styles.experiences_container}>
-      <h1>Experiencias</h1>
+      <h1>Experiências</h1>
 
       <section>
         <div>
-          <h2>EXPERIÊNCIA PROFISSIONAL</h2>
+          <h2>Experiência Profissional</h2>
           <ul>
-          <li>
-              ProBrain, Sorocaba -SP – Estágio em Front-End - OUTUBRO DE 2024 – ATUAL.
-            </li>
             <li>
-              AgBe Soluções LTDA, Campinas -SP – Estágio em Full Stack - ABRIL DE 2024 – SETEMBRO DE 2024.
+              <strong>ProBrain</strong>, Sorocaba - SP –{" "}
+              <em>Estágio em Front-End</em> –{" "}
+              <span>Outubro de 2024 – Atual</span>
             </li>
+
             <li>
-              Ritnner Odontologia, Campinas – SP - Auxiliar de Saúde Bucal MAIO
-              DE 2022 – MARÇO DE 2024.
+              <strong>AgBe Soluções LTDA</strong>, Campinas - SP –{" "}
+              <em>Estágio em Full Stack</em> –{" "}
+              <span>Abril de 2024 – Setembro de 2024</span>
             </li>
+
             <li>
-              We Smile, Campinas – SP - Auxiliar de Saúde Bucal MARÇO DE 2021 -
-              ABRIL DE 2022.
+              <strong>Ritnner Odontologia</strong>, Campinas – SP –{" "}
+              <em>Auxiliar de Saúde Bucal</em> –{" "}
+              <span>Maio de 2022 – Março de 2024</span>
+            </li>
+
+            <li>
+              <strong>We Smile</strong>, Campinas – SP –{" "}
+              <em>Auxiliar de Saúde Bucal</em> –{" "}
+              <span>Março de 2021 – Abril de 2022</span>
             </li>
           </ul>
         </div>
-         <div>
-          <h2>ATIVIDADES EXTRACURRICULARES</h2>
+        <div>
+          <h2>Atividades Extracurriculares</h2>
           <ul>
             <li>
-              Curso: JavaScriFt / HTML5/ CSS3/ Java – Curso em Vídeo – AGOSTO
-              2023.
+              <strong>JavaScript / HTML5 / CSS3 / Java</strong> – Curso em Vídeo
+              – <em>Agosto 2023</em>
             </li>
-
-            <li> Bootcamp Elas Tech BACKEND - JAVA, MySql, MARÇO 2024.</li>
 
             <li>
-              Programa Desenvolvedor FRONTEND / ONE (Oracle Next Education) com
-              ALURA, FEVEREIRO 2024.
+              <strong>Bootcamp Elas Tech BACKEND</strong> – Java, MySQL –{" "}
+              <em>Março 2024</em>
             </li>
 
-            <li>Curso Fron-End - Origamid - 2024</li>
+            <li>
+              <strong>Programa Desenvolvedor FRONTEND</strong> – ONE (Oracle
+              Next Education) com Alura – <em>Fevereiro 2024</em>
+            </li>
 
-            <li>Curso React.Js - Origamid - 2024</li>
+            <li>
+              <strong>JavaScript / TypeScript / React.js / Figma</strong> –
+              Origamid – <em>2024</em>
+            </li>
 
-            <li>Curso Figma - Origamid - 2024</li>
-
-            <li>Curso Figma - Sujeito Programador - 2024</li>
+            <li>
+              <strong>Figma</strong> – Sujeito Programador – <em>2024</em>
+            </li>
           </ul>
-        </div> 
+        </div>
       </section>
     </div>
   );
