@@ -1,5 +1,5 @@
 import styles from "./About.module.css";
-import Image from "./foto-nayara-moldura-redonda-png.png";
+import Image from "../../assets/imagePerfil/foto-nayara-moldura-redonda-png.png";
 import 'bootstrap-icons/font/bootstrap-icons.css';
 
 

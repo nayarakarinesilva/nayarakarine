@@ -1,6 +1,6 @@
 import React, { useState } from "react"; // Import useState
-import projectsData from "../ProjectsData.json";
-import ImagesWork from "../assets/ImageWork";
+import projectsData from "../../ProjectsData.json";
+import ImagesWork from "../../assets/ImageWork";
 import styles from "./Projects.module.css";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";

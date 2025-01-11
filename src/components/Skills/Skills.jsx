@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./Skills.module.css";
-import Images from "../assets/ImageSkills";
+import Images from "../../assets/ImageSkills";
 
 export default function Skills() {
   return (

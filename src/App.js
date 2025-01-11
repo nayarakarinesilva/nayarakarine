@@ -1,12 +1,12 @@
 // App.js
 import React from "react";
-import Navbar from "./components/Navbar";
-import About from "./components/About";
-import Contact from "./components/Contact";
-import Skills from "./components/Skills";
-import Projects from "./components/Projects";
-import Experiences from "./components/Experiences";
-import Footer from "./components/Footer";
+import Navbar from "./components/Navbar/Navbar";
+import About from "./components/About/About";
+import Contact from "./components/Contact/Contact";
+import Skills from "./components/Skills/Skills";
+import Projects from "./components/Projects/Projects";
+import Experiences from "./components/Experiences/Experiences";
+import Footer from "./components/Footer/Footer";
 
 function App() {
   return (

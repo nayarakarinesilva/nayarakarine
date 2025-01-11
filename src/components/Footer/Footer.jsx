@@ -1,10 +1,12 @@
 import styles from "./Footer.module.css";
 
 function Footer() {
+  const currentYear = new Date().getFullYear();
+
   return (
     <div className={styles.footer_container}>
       <p>
-        &copy; 2024 Desenvolvido por <a href="">Nayara Karine</a>
+        &copy; {currentYear} Desenvolvido por <a href="">Nayara Karine</a>
       </p>
     </div>
   );

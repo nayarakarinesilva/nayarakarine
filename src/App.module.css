@@ -29,3 +29,10 @@ body {
     font-size: 12px; /* Tamanho ainda menor para dispositivos muito pequenos */
   }
 }
+
+@media(prefers-colo-scheme: dark) {
+  body {
+    background-color: #333; /* Cor de fundo para o modo escuro */
+    color: #eeedeb; /* Cor do texto para o modo escuro */
+  }
+}
