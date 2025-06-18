@@ -1,13 +1,14 @@
-
 /* About.module.css */
 
 .about_container {
   font-family: Arial, sans-serif;
-  background: linear-gradient(135deg,
-      rgba(232, 189, 171, 0.5),
-      rgba(212, 171, 199, 0.5),
-      rgba(156, 192, 209, 0.5),
-      rgba(126, 172, 181, 0.5));
+  background: linear-gradient(
+    135deg,
+    rgba(232, 189, 171, 0.5),
+    rgba(212, 171, 199, 0.5),
+    rgba(156, 192, 209, 0.5),
+    rgba(126, 172, 181, 0.5)
+  );
   height: auto;
   min-height: 400px;
   display: flex;
@@ -44,7 +45,6 @@
   font-size: 1.5rem;
   margin-bottom: 1rem;
   color: #7eacb5;
-
 }
 
 .about_container h1 strong {
@@ -75,14 +75,15 @@
   flex-direction: column;
   align-items: center;
   margin: 0px;
-  padding: 0px;
+  padding: 5px;
   border-radius: 5px;
-  color: #333;
+  box-shadow: 2px 2px 5px  #7eacb5;
 }
 
 .link a {
   flex-direction: column;
   align-items: center;
+  font-weight: 600;
   text-decoration: none;
   color: #910a67;
 }
@@ -95,8 +96,8 @@
 }
 
 .link:hover {
-  border-color: rgba(126, 172, 181, 0.259);
-  background: rgba(126, 172, 181, 0.17);
+  border-color: rgba(117, 160, 168, 0.259);
+  background: rgba(99, 136, 143, 0.17);
   transform: scale(1.1);
   transform: translateY(-2px);
 }

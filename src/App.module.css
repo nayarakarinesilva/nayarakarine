@@ -10,29 +10,28 @@ body {
   text-align: center;
 }
 
-
 /* Media Queries */
 @media (max-width: 768px) {
   .App {
-    padding: 10px; /* Reduza o padding em telas menores */
+    padding: 10px;
   }
 }
 
 @media (max-width: 768px) {
   body {
-    font-size: 14px; /* Reduz o tamanho da fonte em telas menores */
+    font-size: 14px;
   }
 }
 
 @media (max-width: 480px) {
   body {
-    font-size: 12px; /* Tamanho ainda menor para dispositivos muito pequenos */
+    font-size: 12px;
   }
 }
 
-@media(prefers-colo-scheme: dark) {
+@media (prefers-colo-scheme: dark) {
   body {
-    background-color: #333; /* Cor de fundo para o modo escuro */
-    color: #eeedeb; /* Cor do texto para o modo escuro */
+    background-color: #333;
+    color: #eeedeb;
   }
 }
