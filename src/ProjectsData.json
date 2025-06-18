@@ -64,7 +64,8 @@
           "project": "https://challenge-one-01.vercel.app/",
           "repository": "https://github.com/nayarakarinearaujo/challenge-one-01/blob/main/README.md"
         }
-      }, {
+      },
+      {
         "id": "front-tedeschi",
         "title": "Tedeschi Veiculos",
         "description": "Site responsivo para a empresa Tedeschi Veículos, destacando serviços e canais de contato.",
@@ -80,6 +81,15 @@
         "links": {
           "project": "https://divineshine.vercel.app/",
           "repository": "https://github.com/nayarakarinearaujo/DivineShine"
+        }
+      },
+      {
+        "id": "front-pagesGlow",
+        "title": "Pages Glow",
+        "description": "Site moderno para divulgação de serviços digitais, incluindo desenvolvimento web, UX/UI e bio para Instagram.",
+        "links": {
+          "project": "https://pages-glow.vercel.app/",
+          "repository": "https://github.com/nayarakarinearaujo/pagesGlow"
         }
       }
     ],
