@@ -9,6 +9,7 @@ import ConversorMoedas from './imageWork/conversorMoedas.png';
 import PortalTech from './imageWork/img-portaltech.jpg';
 import Tedeschi from './imageWork/tedeschiveiculos.png';
 import DivineShine from './imageWork/DivineShine.jpeg';
+import PagesGlow from './imageWork/PagesGlow.png';
 
 const ImagesWork = {
     "front-piscinas": Piscineiro, 
@@ -20,6 +21,7 @@ const ImagesWork = {
     "front-decodificadorTexto": Decodificador,
     "front-tedeschi": Tedeschi,
     "front-divineShine": DivineShine,
+    "front-pagesGlow": PagesGlow,
     "fullstack-conversorPhp": ConversorMoedas,
     "fullstack-sistemaChamados": PortalTech,
 };
