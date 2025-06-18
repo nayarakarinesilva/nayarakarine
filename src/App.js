@@ -1,5 +1,7 @@
 // App.js
 import React from "react";
+import './App.module.css'; // <- aqui importa o CSS global
+
 import Navbar from "./components/Navbar/Navbar";
 import About from "./components/About/About";
 import Contact from "./components/Contact/Contact";
