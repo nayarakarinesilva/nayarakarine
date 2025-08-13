@@ -30,7 +30,7 @@ export default function About() {
             <div className={styles.linkContainer}>
               <div className={styles.link}>
                 <a
-                  href="https://github.com/nayarakarinearaujo"
+                  href="https://github.com/nayarakarinesilva"
                   aria-label="GitHub"
                   target="blanck"
                 >
@@ -40,7 +40,7 @@ export default function About() {
               </div>
               <div className={styles.link}>
                 <a
-                  href="https://www.linkedin.com/in/nayarakarine-araujo/"
+                  href="https://www.linkedin.com/in/nayarakarine-silva/"
                   aria-label="LinkedIn"
                   target="blanck"
                 >
@@ -50,7 +50,7 @@ export default function About() {
               </div>
               <div className={styles.link}>
                 <a
-                  href="https://www.instagram.com/nayarakarine.araujo/"
+                  href="https://www.instagram.com/nayarakarine.silva/"
                   aria-label="Instagram"
                   target="blanck"
                 >
