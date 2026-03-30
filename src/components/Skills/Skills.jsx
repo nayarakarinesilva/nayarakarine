@@ -36,6 +36,13 @@ export default function Skills() {
 
               <div className={styles.skills_card}>
                 <li>
+                  <img src={Images.typescript} alt="Logo do TypeScript" />
+                  <span>TypeScript</span>
+                </li>
+              </div>
+
+              <div className={styles.skills_card}>
+                <li>
                   <img src={Images.figma} alt="Logo do Figma" />
                   <span>Figma</span>
                 </li>
@@ -51,35 +58,37 @@ export default function Skills() {
               <div className={styles.skills_card}>
                 <li>
                   <img src={Images.vuejs} alt="Logo do VueJs" />
-                  <span>Vue.Js</span>
+                  <span>Vue.js</span>
                 </li>
               </div>
+
+              <div className={styles.skills_card}>
+                <li>
+                  <img src={Images.mui} alt="Logo do Material UI" />
+                  <span>Material UI</span>
+                </li>
+              </div>
+
+              <div className={styles.skills_card}>
+                <li>
+                  <img src={Images.antdesign} alt="Logo do Ant Design" />
+                  <span>Ant Design</span>
+                </li>
+              </div>
+
             </ul>
           </div>
         </section>
 
         <section>
-          <h2>Back-end</h2>
+          <h2>Back-end e Banco de Dados</h2>
           <div className={styles.skills_container}>
             <ul>
-              <div className={styles.skills_card}>
-                <li>
-                  <img src={Images.java} alt="Logo do Java" />
-                  <span>Java</span>
-                </li>
-              </div>
-
+              
               <div className={styles.skills_card}>
                 <li>
                   <img src={Images.mysql} alt="Logo do MySql" />
                   <span>MySql</span>
-                </li>
-              </div>
-
-              <div className={styles.skills_card}>
-                <li>
-                  <img src={Images.springBoot} alt="Logo do Spring Boot" />
-                  <span>Spring Boot</span>
                 </li>
               </div>
 
