@@ -1,5 +1,5 @@
 import React, { useState } from "react"; // Import useState
-import projectsData from "../../ProjectsData.json";
+import projectsData from "../../mock/ProjectsData.json";
 import styles from "./Projects.module.css";
 import ProjectSection from "./ProjectsSections";
 
