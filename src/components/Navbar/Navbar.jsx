@@ -13,7 +13,7 @@ import IconButton from "@mui/material/IconButton";
 import DarkModeIcon from "@mui/icons-material/DarkMode";
 import LightModeIcon from "@mui/icons-material/LightMode";
 
-function Navbar({ alterarTema, temaAtivo }) {
+function Navbar({ toggleTheme, activeTheme }) {
   const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
@@ -58,6 +58,7 @@ function Navbar({ alterarTema, temaAtivo }) {
     { name: "CONTATO", href: "#contact" },
   ];
 
+  // !Ajustar o botão de menu no mobile
   return (
     // <nav className={`${styles.navbar} js-menu`}>
     <nav>
@@ -77,8 +78,8 @@ function Navbar({ alterarTema, temaAtivo }) {
       <AppBar
         position="static"
         sx={{
-          background: temaAtivo === "temaClaro" ? "#fff" : "#1B1C1C",
-          color: temaAtivo === "temaClaro" ? "#000" : "#fff",
+          background: activeTheme === "lightTheme" ? "#fff" : "#1B1C1C",
+          color: activeTheme === "lightTheme" ? "#000" : "#fff",
           boxShadow: "none",
           marginBottom: "6px",
         }}
@@ -91,7 +92,7 @@ function Navbar({ alterarTema, temaAtivo }) {
               <Typography
                 sx={{
                   fontWeight: 600,
-                  color: temaAtivo === "temaClaro" ? "#000" : "#fff",
+                  color: activeTheme === "lightTheme" ? "#000" : "#fff",
                 }}
               >
                 NAYARA KARINE
@@ -112,16 +113,19 @@ function Navbar({ alterarTema, temaAtivo }) {
                   component="a"
                   href={item.href}
                   sx={{
+                    letterSpacing: "0.5px",
+                    lineHeight: "20px",
+
                     "& .MuiTypography-root": {
                       transition: "color 0.3s ease",
                     },
                     "&:hover": {
                       backgroundColor:
-                        temaAtivo === "temaClaro"
+                        activeTheme === "lightTheme"
                           ? "#8325811a"
                           : "rgba(131, 37, 129, 0.25)",
                       boxShadow:
-                        temaAtivo === "temaClaro"
+                        activeTheme === "lightTheme"
                           ? "none"
                           : "0 0 12px rgba(255, 0, 255, 0.4), 0 0 24px rgba(131, 37, 129, 0.6)",
                       "& .MuiTypography-root": {
@@ -135,7 +139,7 @@ function Navbar({ alterarTema, temaAtivo }) {
                     sx={{
                       fontSize: "0.8rem",
                       fontWeight: 700,
-                      color: temaAtivo === "temaClaro" ? "#333" : "#fff",
+                      color: activeTheme === "lightTheme" ? "#333" : "#fff",
                     }}
                   >
                     {item.name}
@@ -144,8 +148,8 @@ function Navbar({ alterarTema, temaAtivo }) {
               </ListItem>
             ))}
           </List>
-          <IconButton onClick={alterarTema} color="inherit">
-            {temaAtivo === "temaClaro" ? <DarkModeIcon /> : <LightModeIcon />}
+          <IconButton onClick={toggleTheme} color="inherit">
+            {activeTheme === "lightTheme" ? <DarkModeIcon /> : <LightModeIcon />}
           </IconButton>
         </Toolbar>
       </AppBar>

@@ -1,17 +1,22 @@
 import styles from "./About.module.css";
 import Image from "../../assets/imagePerfil/perfil.jpg";
-import { Box, Card, Typography } from "@mui/material";
+import { Box, Button, Card, Typography } from "@mui/material";
 import Grid from "@mui/material/Grid";
 
-export default function About() {
+export default function About({ toggleTheme, activeTheme }) {
   return (
-    <Box sx={{ px: { xs: 2, md: 8 }, py: 4 }}>
+    <Box
+      sx={{
+        px: { xs: 2, md: 12 },
+        py: 6,
+      }}
+    >
       <Grid container spacing={2} columns={16}>
         <Grid item xs={8}>
           <Typography
             sx={{
               textTransform: "uppercase",
-              color: "#9CA3AF",
+              color: activeTheme === "lightTheme" ? "#9CA3AF" : "#FDF2F8",
               fontWeight: 600,
               fontSize: "0.9rem",
               marginBottom: "15px",
@@ -42,7 +47,7 @@ export default function About() {
           </Typography>
           <Box
             sx={{
-              color: "#666666",
+              color: activeTheme === "lightTheme" ? "#666666" : "#FDF2F8",
               display: "flex",
               flexDirection: "column",
               gap: "15px",
@@ -58,32 +63,93 @@ export default function About() {
               usuários e geram resultados para seu negócio.
             </Typography>
           </Box>
+          <Box
+            sx={{
+              display: "flex",
+              flexDirection: "row",
+              gap: "15px",
+              pt: "40px",
+            }}
+          >
+            <Button
+              sx={{
+                background: "#832581",
+                fontWeight: 600,
+                "&:hover": {
+                  backgroundColor: "#721f71",
+                  boxShadow:
+                    "0 0 12px rgba(255, 0, 255, 0.4), 0 0 24px rgba(131, 37, 129, 0.6)",
+                },
+              }}
+              variant="contained"
+            >
+              VER PROJETOS
+            </Button>
+            <Button
+              sx={{
+                border: "solid 2px #832581",
+                color: "#832581",
+                fontWeight: 600,
+                "&:hover": {
+                  boxShadow:
+                    "0 0 12px rgba(255, 0, 255, 0.4), 0 0 24px rgba(131, 37, 129, 0.6)",
+                  border: "solid 2px #832581",
+                },
+              }}
+              variant="outlined"
+            >
+              DOWNLOAD CV
+            </Button>
+          </Box>
         </Grid>
 
         <Grid item xs={8}>
-          <Box sx={{ width: 260, mx: "auto", p: 4 }}>
+          <Box
+            sx={{
+              position: "relative",
+              width: 420,
+              height: 520,
+              mx: "auto",
+            }}
+          >
+            {/* Arte rosa atrás */}
             <Box
               sx={{
-                background: "#FCE7F3",
+                position: "absolute",
+                width: 350,
+                height: 350,
+                background:
+                  activeTheme === "lightTheme" ? "#FCE7F3" : "#832581",
+                borderRadius: "40px",
+                left: 0,
+                bottom: 60,
+                zIndex: 1,
+                filter: "blur(0px)",
+              }}
+            />
+
+            {/* Card branco */}
+            <Box
+              sx={{
+                position: "absolute",
+                width: 350,
                 borderRadius: "30px",
-                p: 4,
-                position: "relative",
-                overflow: "hidden",
-                boxShadow: "0 25px 80px rgba(0,0,0,0.08)",
-                top: 10,
+                right: 30,
+                top: "15%",
+                zIndex: 2,
+                boxShadow: "0 25px 80px rgba(0,0,0,0.10)",
               }}
             >
-              {/* <Grid item xs={8}> */}
               <Box
                 component="img"
                 src={Image}
+                alt="Portfolio"
                 sx={{
-                  width: 280,
+                  width: "100%",
                   borderRadius: "20px",
-                  boxShadow: "0 15px 40px rgba(131,37,129,0.25)",
+                  display: "block",
                 }}
               />
-              {/* </Grid> */}
             </Box>
           </Box>
           {/* <section className={styles.about_container_links}>
