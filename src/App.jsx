@@ -14,7 +14,7 @@ function App() {
   const [temaAtivo, setTemaAtivo] = useState("temaClaro");
 
   const temas = {
-    temaEscuro: { backgroundColor: "#333", color: "#ffffff" },
+    temaEscuro: { backgroundColor: "#1B1C1C", color: "#FDF2F8" },
     temaClaro: { backgroundColor: "#f2f2f2", color: "#333" },
   };
 

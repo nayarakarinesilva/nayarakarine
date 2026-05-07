@@ -77,7 +77,7 @@ function Navbar({ alterarTema, temaAtivo }) {
       <AppBar
         position="static"
         sx={{
-          background: temaAtivo === "temaClaro" ? "#fff" : "#333",
+          background: temaAtivo === "temaClaro" ? "#fff" : "#1B1C1C",
           color: temaAtivo === "temaClaro" ? "#000" : "#fff",
           boxShadow: "none",
           marginBottom: "6px",
@@ -116,7 +116,14 @@ function Navbar({ alterarTema, temaAtivo }) {
                       transition: "color 0.3s ease",
                     },
                     "&:hover": {
-                      backgroundColor: "#8325811a",
+                      backgroundColor:
+                        temaAtivo === "temaClaro"
+                          ? "#8325811a"
+                          : "rgba(131, 37, 129, 0.25)",
+                      boxShadow:
+                        temaAtivo === "temaClaro"
+                          ? "none"
+                          : "0 0 12px rgba(255, 0, 255, 0.4), 0 0 24px rgba(131, 37, 129, 0.6)",
                       "& .MuiTypography-root": {
                         color: "#832581",
                         textDecoration: "underline",
