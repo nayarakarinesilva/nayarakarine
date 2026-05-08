@@ -1,5 +1,5 @@
 // components/Navbar.js
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import styles from "./Navbar.module.css";
 import Logo from "../../assets/logo.svg";
 import AppBar from "@mui/material/AppBar";
@@ -12,9 +12,14 @@ import { Typography, Box } from "@mui/material";
 import IconButton from "@mui/material/IconButton";
 import DarkModeIcon from "@mui/icons-material/DarkMode";
 import LightModeIcon from "@mui/icons-material/LightMode";
+import { GlobalContext } from "../../context/GlobalContext";
 
-function Navbar({ toggleTheme, activeTheme }) {
+function Navbar() {
+  const global = useContext(GlobalContext);
+
   const [isOpen, setIsOpen] = useState(false);
+
+  const activeTheme = global.activeTheme;
 
   useEffect(() => {
     function initScrollSoft() {
@@ -148,8 +153,12 @@ function Navbar({ toggleTheme, activeTheme }) {
               </ListItem>
             ))}
           </List>
-          <IconButton onClick={toggleTheme} color="inherit">
-            {activeTheme === "lightTheme" ? <DarkModeIcon /> : <LightModeIcon />}
+          <IconButton onClick={global.toggleTheme} color="inherit">
+            {activeTheme === "lightTheme" ? (
+              <DarkModeIcon />
+            ) : (
+              <LightModeIcon />
+            )}
           </IconButton>
         </Toolbar>
       </AppBar>

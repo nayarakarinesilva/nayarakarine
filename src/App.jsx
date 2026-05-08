@@ -1,6 +1,7 @@
-// App.js
-import React, { useState, useEffect } from "react";
+import React, { useContext} from "react";
 import "./App.module.css";
+
+import { GlobalProvider, GlobalContext } from "./context/GlobalContext";
 
 import Navbar from "./components/Navbar/Navbar";
 import About from "./components/About/About";
@@ -9,43 +10,24 @@ import Skills from "./components/Skills/Skills";
 import Projects from "./components/Projects/Projects";
 import Experiences from "./components/Experiences/Experiences";
 import Footer from "./components/Footer/Footer";
+
 import { Divider } from "@mui/material";
 
-function App() {
-  const [activeTheme, setActiveTheme] = useState("lightTheme");
-
-  const themes = {
-    darkTheme: {
-      backgroundColor: "#1B1C1C",
-      color: "#FDF2F8",
-    },
-
-    lightTheme: {
-      backgroundColor: "#fff",
-      color: "#333",
-    },
-  };
-
-  const toggleTheme = () => {
-    setActiveTheme((prev) =>
-      prev === "lightTheme" ? "darkTheme" : "lightTheme",
-    );
-  };
-
-  useEffect(() => {
-    document.body.className = activeTheme;
-  }, [activeTheme]);
+function AppContent() {
+  const global = useContext(GlobalContext);
 
   return (
-    <div style={themes[activeTheme]}>
-      <Navbar toggleTheme={toggleTheme} activeTheme={activeTheme} />
+    <div style={global.themes[global.activeTheme]}>
+      <Navbar />
+
       <Divider />
+
       <section id="home">
-        <About activeTheme={activeTheme} />
+        <About />
       </section>
 
       <section id="skills">
-        <Skills activeTheme={activeTheme} />
+        <Skills />
       </section>
 
       <section id="projects">
@@ -62,6 +44,14 @@ function App() {
 
       <Footer />
     </div>
+  );
+}
+
+function App() {
+  return (
+    <GlobalProvider>
+      <AppContent />
+    </GlobalProvider>
   );
 }
 

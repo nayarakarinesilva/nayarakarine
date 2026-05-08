@@ -1,9 +1,14 @@
+import { useContext } from "react";
 import styles from "./About.module.css";
 import Image from "../../assets/imagePerfil/perfil.jpg";
 import { Box, Button, Card, Typography } from "@mui/material";
 import Grid from "@mui/material/Grid";
+import { GlobalContext } from "../../context/GlobalContext";
 
-export default function About({ activeTheme }) {
+export default function About() {
+  const global = useContext(GlobalContext);
+
+  const activeTheme = global.activeTheme;
   return (
     <Box
       sx={{
