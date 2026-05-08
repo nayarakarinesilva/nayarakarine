@@ -41,11 +41,11 @@ function App() {
       <Navbar toggleTheme={toggleTheme} activeTheme={activeTheme} />
       <Divider />
       <section id="home">
-        <About toggleTheme={toggleTheme} activeTheme={activeTheme} />
+        <About activeTheme={activeTheme} />
       </section>
 
       <section id="skills">
-        <Skills />
+        <Skills activeTheme={activeTheme} />
       </section>
 
       <section id="projects">

@@ -3,7 +3,7 @@ import Image from "../../assets/imagePerfil/perfil.jpg";
 import { Box, Button, Card, Typography } from "@mui/material";
 import Grid from "@mui/material/Grid";
 
-export default function About({ toggleTheme, activeTheme }) {
+export default function About({ activeTheme }) {
   return (
     <Box
       sx={{
