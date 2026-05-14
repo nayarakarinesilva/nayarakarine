@@ -7,6 +7,7 @@ import CodeIcon from "@mui/icons-material/Code";
 import SettingsSuggestIcon from "@mui/icons-material/SettingsSuggest";
 
 export default function Skills({ activeTheme }) {
+  console.log("tema", activeTheme)
   const frontSkills = [
     { name: "HTML5", img: Images.html5 },
     { name: "CSS3", img: Images.css3 },
@@ -26,7 +27,13 @@ export default function Skills({ activeTheme }) {
   ];
 
   return (
-    <Box sx={{ background: "#F9FAFB", padding: "30px", height: "500px" }}>
+    <Box
+      sx={{
+        background: activeTheme === "lightTheme" ? "#F9FAFB" : "none",
+        padding: "30px",
+        height: "500px",
+      }}
+    >
       <Box
         sx={{
           display: "flex",
@@ -37,14 +44,27 @@ export default function Skills({ activeTheme }) {
         <Typography variant="h4" sx={{ fontWeight: 600 }}>
           Habilidades
         </Typography>
-        <Typography sx={{ color: "#666666" }}>
+        <Typography
+          sx={{ color: activeTheme === "lightTheme" ? "#9CA3AF" : "#FDF2F8" }}
+        >
           Tecnologias e ferramentas que utilizo no dia a dia
         </Typography>
       </Box>
 
       <Grid container spacing={2} columns={16} sx={{ px: 4, mt: 2 }}>
         <Grid item xs={8}>
-          <Card sx={{ padding: "20px", height: "230px" }}>
+          <Box
+            sx={{
+              padding: "20px",
+              height: "230px",
+              border:
+                activeTheme === "lightTheme"
+                  ? "solid 1px #F3F4F6"
+                  : "solid 1px #832581",
+              borderRadius: "10px",
+              boxShadow: "0 2px 8px rgba(0, 0, 0, 0.08);",
+            }}
+          >
             {" "}
             <Box
               sx={{
@@ -92,11 +112,19 @@ export default function Skills({ activeTheme }) {
                 </Box>
               ))}
             </Box>
-          </Card>
+          </Box>
         </Grid>
 
         <Grid item xs={8}>
-          <Card sx={{ padding: "20px", height: "230px" }}>
+          <Box
+            sx={{
+              padding: "20px",
+              height: "230px",
+              border: "solid 1px #F3F4F6",
+              borderRadius: "10px",
+              boxShadow: "0 2px 8px rgba(0, 0, 0, 0.08);",
+            }}
+          >
             <Box
               sx={{
                 display: "flex",
@@ -143,7 +171,7 @@ export default function Skills({ activeTheme }) {
                 </Box>
               ))}
             </Box>
-          </Card>
+          </Box>
         </Grid>
       </Grid>
     </Box>
