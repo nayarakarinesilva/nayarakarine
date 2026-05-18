@@ -1,4 +1,4 @@
-import React, { useContext} from "react";
+import React, { useContext } from "react";
 import "./App.module.css";
 
 import { GlobalProvider, GlobalContext } from "./context/GlobalContext";
@@ -15,23 +15,24 @@ import { Divider } from "@mui/material";
 
 function AppContent() {
   const global = useContext(GlobalContext);
+  const activeTheme = global.activeTheme;
 
   return (
-    <div style={global.themes[global.activeTheme]}>
+    <div style={global.themes[activeTheme]}>
       <Navbar />
 
       <Divider />
 
       <section id="home">
-        <About />
+        <About activeTheme={activeTheme} />
       </section>
 
       <section id="skills">
-        <Skills />
+        <Skills activeTheme={activeTheme} />
       </section>
 
       <section id="projects">
-        <Projects />
+        <Projects activeTheme={activeTheme} />
       </section>
 
       <section id="experiences">

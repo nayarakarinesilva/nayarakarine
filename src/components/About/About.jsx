@@ -5,10 +5,8 @@ import { Box, Button, Card, Typography } from "@mui/material";
 import Grid from "@mui/material/Grid";
 import { GlobalContext } from "../../context/GlobalContext";
 
-export default function About() {
-  const global = useContext(GlobalContext);
-
-  const activeTheme = global.activeTheme;
+export default function About({activeTheme}) {
+  
   return (
     <Box
       sx={{
