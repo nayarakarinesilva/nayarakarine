@@ -9,7 +9,7 @@ export default function SkillCard({ children, icon: Icon, title, activeTheme }) 
         border:
           activeTheme === "lightTheme"
             ? "solid 1px #F3F4F6"
-            : "solid 1px #832581",
+            : "solid 1px #910a67",
         borderRadius: "10px",
         boxShadow: "0 2px 8px rgba(0, 0, 0, 0.08);",
       }}

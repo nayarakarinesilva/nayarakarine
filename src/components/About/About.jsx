@@ -31,7 +31,7 @@ export default function About({activeTheme}) {
             variant="h2"
             sx={{
               fontWeight: 600,
-              color: "#832581",
+              color: "#910a67",
               marginBottom: "15px",
             }}
           >
@@ -41,7 +41,7 @@ export default function About({activeTheme}) {
             variant="h6"
             sx={{
               fontWeight: 600,
-              color: "#832581",
+              color: "#910a67",
               textTransform: "uppercase",
               marginBottom: "15px",
             }}
@@ -76,10 +76,10 @@ export default function About({activeTheme}) {
           >
             <Button
               sx={{
-                background: "#832581",
+                background: "#910a67",
                 fontWeight: 600,
                 "&:hover": {
-                  backgroundColor: "#721f71",
+                  backgroundColor: "#910a67",
                   boxShadow:
                     "0 0 12px rgba(255, 0, 255, 0.4), 0 0 24px rgba(131, 37, 129, 0.6)",
                 },
@@ -90,13 +90,13 @@ export default function About({activeTheme}) {
             </Button>
             <Button
               sx={{
-                border: "solid 2px #832581",
-                color: "#832581",
+                border: "solid 2px #910a67",
+                color: "#910a67",
                 fontWeight: 600,
                 "&:hover": {
                   boxShadow:
                     "0 0 12px rgba(255, 0, 255, 0.4), 0 0 24px rgba(131, 37, 129, 0.6)",
-                  border: "solid 2px #832581",
+                  border: "solid 2px #910a67",
                 },
               }}
               variant="outlined"
