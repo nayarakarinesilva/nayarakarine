@@ -3,7 +3,6 @@ import styles from "./About.module.css";
 import Image from "../../assets/imagePerfil/perfil.jpg";
 import { Box, Button, Card, Typography } from "@mui/material";
 import Grid from "@mui/material/Grid";
-import { GlobalContext } from "../../context/GlobalContext";
 
 export default function About({activeTheme}) {
   
@@ -122,7 +121,7 @@ export default function About({activeTheme}) {
                 width: 350,
                 height: 350,
                 background:
-                  activeTheme === "lightTheme" ? "#FCE7F3" : "#832581",
+                  activeTheme === "lightTheme" ? "#FCE7F3" : "#910a67",
                 borderRadius: "40px",
                 left: 0,
                 bottom: 60,

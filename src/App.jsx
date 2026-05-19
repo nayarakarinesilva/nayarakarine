@@ -36,7 +36,7 @@ function AppContent() {
       </section>
 
       <section id="experiences">
-        <Experiences />
+        <Experiences activeTheme={activeTheme} />
       </section>
 
       <section id="contact">

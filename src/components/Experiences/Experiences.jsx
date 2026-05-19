@@ -1,11 +1,76 @@
+import { Box, Divider, Typography } from "@mui/material";
 import styles from "./Experiences.module.css";
+import { Description } from "@mui/icons-material";
 
-function Experiences() {
+function Experiences({ activeTheme }) {
+  
+  const mapExperiences = [
+    {
+      id: 1,
+      year: "2023",
+      title: "Ritnner Odontologia - Auxiliar de Saúde Bucal",
+      description:
+        "Atendimento ao público, organização de ambiente clínico e apoio em procedimentos, desenvolvendo habilidades de responsabilidade, comunicação e trabalho em equipe.",
+    },
+    {
+      id: 2,
+      year: "2024",
+      title: "AgBe Soluções LTDA - Estágio em Front-End",
+      description:
+        "Atuação com PHP, JavaScript e Vue.js no desenvolvimento e manutenção de sistemas web.",
+    },
+    {
+      id: 3,
+      year: "Atual",
+      title: "Projetos Open Source",
+      description:
+        "Contribuições utilizando TypeScript, JavaScript e Tailwind CSS, com foco em melhorias de código e resolução de bugs.",
+    },
+    {
+      id: 4,
+      year: "Atual",
+      title: "ProBrain - Estágio em Front-End",
+      description:
+        "Desenvolvimento de interfaces com JavaScript, React, TypeScript, MUI e Ant Design, focando em componentização e boas práticas.",
+    },
+  ];
+
   return (
-    <div className={styles.experiences_container}>
-      <h1>Experiências</h1>
+    <Box sx={{ display: "flex", flexDirection: "column", paddingTop: "50px" }}>
+      <Typography
+        variant="h4"
+        sx={{ textAlign: "center", fontWeight: 600, mb: 3, color: "#7eacb5" }}
+      >
+        Experiências
+      </Typography>
+      <Divider />
 
-      <section>
+      <Box
+        sx={{
+          display: "flex",
+          gap:1,
+          padding:"20px"
+        }}
+      >
+        {mapExperiences.map((item) => (
+          <Box
+            key={item.id}
+            sx={{
+              borderRadius: "10px",
+              padding:"20px",
+              border:
+                activeTheme === "lightTheme"
+                  ? "solid 1px #F3F4F6"
+                  : "solid 1px #910a67",
+            }}
+          >
+            {/* Badge */}
+            <Typography>{item.title}</Typography>
+            <Typography>{item.description}</Typography>
+          </Box>
+        ))}
+      </Box>
+      {/* <section>
         <div>
           <h2>Experiência Profissional</h2>
           <ul>
@@ -62,8 +127,8 @@ function Experiences() {
             </li>
           </ul>
         </div>
-      </section>
-    </div>
+      </section> */}
+    </Box>
   );
 }
 

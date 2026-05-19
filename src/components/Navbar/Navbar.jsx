@@ -84,7 +84,7 @@ function Navbar() {
         position="static"
         sx={{
           background: activeTheme === "lightTheme" ? "#fff" : "#1B1C1C",
-          color: activeTheme === "lightTheme" ? "#000" : "#fff",
+          color: activeTheme === "lightTheme" ? "#333" : "#FDF2F8",
           boxShadow: "none",
           marginBottom: "6px",
         }}
@@ -97,13 +97,13 @@ function Navbar() {
               <Typography
                 sx={{
                   fontWeight: 600,
-                  color: activeTheme === "lightTheme" ? "#000" : "#fff",
+                  color: activeTheme === "lightTheme" ? "#333" : "#FDF2F8",
                 }}
               >
                 NAYARA KARINE
               </Typography>
               <Typography
-                sx={{ fontSize: "0.8rem", fontWeight: 600, color: "#832581" }}
+                sx={{ fontSize: "0.8rem", fontWeight: 600, color: "#910a67" }}
               >
                 Desenvolvedora Front-end
               </Typography>
@@ -134,7 +134,7 @@ function Navbar() {
                           ? "none"
                           : "0 0 12px rgba(255, 0, 255, 0.4), 0 0 24px rgba(131, 37, 129, 0.6)",
                       "& .MuiTypography-root": {
-                        color: "#832581",
+                        color: "#910a67",
                         textDecoration: "underline",
                       },
                     },
@@ -144,7 +144,7 @@ function Navbar() {
                     sx={{
                       fontSize: "0.8rem",
                       fontWeight: 700,
-                      color: activeTheme === "lightTheme" ? "#333" : "#fff",
+                      color: activeTheme === "lightTheme" ? "#333" : "#FDF2F8",
                     }}
                   >
                     {item.name}
