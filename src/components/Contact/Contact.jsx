@@ -1,13 +1,14 @@
 import React, { useState } from "react";
 import styles from "./Contact.module.css";
-import Title from "../../ui/Title";
+import Title from "../../ui/Title/Title";
 import { Box, Button, Card, Grid, TextField, Typography } from "@mui/material";
-import Input from "../../ui/Input";
+import Input from "../../ui/Input/Input";
 import EmailOutlinedIcon from "@mui/icons-material/EmailOutlined";
 import LocationOnOutlinedIcon from "@mui/icons-material/LocationOnOutlined";
 import { Description } from "@mui/icons-material";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import GitHubIcon from "@mui/icons-material/GitHub";
+import CustomButton from "../../ui/CustomButton/CustomButton";
 
 export default function Contact() {
   const [name, setName] = useState("");
@@ -125,15 +126,13 @@ export default function Contact() {
               Entre em contato
             </Typography>
             <Typography
-              
               sx={{
                 color: "#666666",
-                mb: 2,
-                fontSize:"14px"
+                mb: 5,
+                fontSize: "14px",
               }}
             >
-              Estou disponível para novos projetos e oportunidades. Vamos tomar
-              um café virtual? ☕
+              Estou disponível para novos projetos e oportunidades.
             </Typography>
             {listContact.map((item) => (
               <Box key={item.id} sx={{ mb: 2 }}>
@@ -191,8 +190,19 @@ export default function Contact() {
                 sx={{
                   backgroundColor: "#fff",
                   borderRadius: "12px",
-                  "& .MuiOutlinedInput-notchedOutline": {
-                    border: "none",
+
+                  "& .MuiOutlinedInput-root": {
+                    borderRadius: "12px",
+
+                    // sem borda normal
+                    "& .MuiOutlinedInput-notchedOutline": {
+                      border: "none",
+                    },
+
+                    // borda apenas no focus
+                    "&.Mui-focused .MuiOutlinedInput-notchedOutline": {
+                      border: "2px solid #910a67",
+                    },
                   },
 
                   "& .MuiInputLabel-root": {
@@ -205,26 +215,7 @@ export default function Contact() {
                 }}
               />
             </Box>
-            <Button
-              sx={{
-                width: "248px",
-                height: "50px",
-                background: "#910a67",
-                fontSize: "14px",
-                fontWeight: 600,
-                textTransform: "uppercase",
-                borderRadius: "12px",
-                mt: 2,
-                "&:hover": {
-                  backgroundColor: "#910a67",
-                  boxShadow:
-                    "0 0 12px rgba(255, 0, 255, 0.4), 0 0 24px rgba(131, 37, 129, 0.6)",
-                },
-              }}
-              variant="contained"
-            >
-              Enviar Mensagem
-            </Button>
+            <CustomButton text="Enviar Mensagem" />
           </Grid>
         </Grid>
       </Card>

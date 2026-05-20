@@ -3,9 +3,9 @@ import styles from "./About.module.css";
 import Image from "../../assets/imagePerfil/perfil.jpg";
 import { Box, Button, Card, Typography } from "@mui/material";
 import Grid from "@mui/material/Grid";
+import CustomButton from "../../ui/CustomButton/CustomButton";
 
-export default function About({activeTheme}) {
-  
+export default function About({ activeTheme }) {
   return (
     <Box
       sx={{
@@ -73,35 +73,8 @@ export default function About({activeTheme}) {
               pt: "40px",
             }}
           >
-            <Button
-              sx={{
-                background: "#910a67",
-                fontWeight: 600,
-                "&:hover": {
-                  backgroundColor: "#910a67",
-                  boxShadow:
-                    "0 0 12px rgba(255, 0, 255, 0.4), 0 0 24px rgba(131, 37, 129, 0.6)",
-                },
-              }}
-              variant="contained"
-            >
-              VER PROJETOS
-            </Button>
-            <Button
-              sx={{
-                border: "solid 2px #910a67",
-                color: "#910a67",
-                fontWeight: 600,
-                "&:hover": {
-                  boxShadow:
-                    "0 0 12px rgba(255, 0, 255, 0.4), 0 0 24px rgba(131, 37, 129, 0.6)",
-                  border: "solid 2px #910a67",
-                },
-              }}
-              variant="outlined"
-            >
-              DOWNLOAD CV
-            </Button>
+            <CustomButton text="Ver Projetos" />
+            <CustomButton text="Download CV" variant="outlined" />
           </Box>
         </Grid>
 

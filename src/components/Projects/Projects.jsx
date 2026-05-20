@@ -13,7 +13,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import ProjectSection from "./ProjectsSections";
-import Title from "../../ui/Title";
+import Title from "../../ui/Title/Title";
 
 export default function Projects({ activeTheme }) {
   const { front, back, fullstack } = projectsData.projects;

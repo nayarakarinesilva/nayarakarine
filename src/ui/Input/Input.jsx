@@ -4,14 +4,25 @@ const Input = ({ text }) => {
   return (
     <TextField
       label={text}
+      variant="outlined"
       sx={{
         flex: 1,
         backgroundColor: "#fff",
         borderRadius: "12px",
         mb: "20px",
 
-        "& .MuiOutlinedInput-notchedOutline": {
-          border: "none",
+        "& .MuiOutlinedInput-root": {
+          borderRadius: "12px",
+
+          // sem borda normal
+          "& .MuiOutlinedInput-notchedOutline": {
+            border: "none",
+          },
+
+          // borda apenas no focus
+          "&.Mui-focused .MuiOutlinedInput-notchedOutline": {
+            border: "2px solid #910a67",
+          },
         },
 
         "& .MuiInputLabel-root": {
@@ -25,4 +36,5 @@ const Input = ({ text }) => {
     />
   );
 };
+
 export default Input;

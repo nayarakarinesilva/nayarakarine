@@ -4,8 +4,8 @@ import { Typography, Box, Card } from "@mui/material";
 import Grid from "@mui/material/Grid";
 import CodeIcon from "@mui/icons-material/Code";
 import SettingsSuggestIcon from "@mui/icons-material/SettingsSuggest";
-import SkillCard from "../../ui/SkillCard";
-import Title from "../../ui/Title";
+import CardSkill from "../../ui/CardSkill/CardSkill";
+import Title from "../../ui/Title/Title";
 
 export default function Skills({ activeTheme }) {
   const frontSkills = [
@@ -49,7 +49,7 @@ export default function Skills({ activeTheme }) {
 
       <Grid container spacing={2} columns={16} sx={{ px: 4, mt: 2 }}>
         <Grid item xs={8}>
-          <SkillCard
+          <CardSkill
             icon={CodeIcon}
             title={"Front-end"}
             activeTheme={activeTheme}
@@ -68,11 +68,11 @@ export default function Skills({ activeTheme }) {
                 </Typography>
               </Box>
             ))}
-          </SkillCard>
+          </CardSkill>
         </Grid>
 
         <Grid item xs={8}>
-          <SkillCard
+          <CardSkill
             icon={SettingsSuggestIcon}
             title={"Ferramentas"}
             activeTheme={activeTheme}
@@ -91,7 +91,7 @@ export default function Skills({ activeTheme }) {
                 </Typography>
               </Box>
             ))}
-          </SkillCard>
+          </CardSkill>
         </Grid>
       </Grid>
     </Box>

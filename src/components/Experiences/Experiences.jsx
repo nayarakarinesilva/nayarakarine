@@ -2,7 +2,7 @@ import { Box, Chip, Divider, Typography } from "@mui/material";
 // import styles from "./Experiences.module.css";
 import { Description } from "@mui/icons-material";
 import mapExperiences from "../../data/experiences";
-import Title from "../../ui/Title";
+import Title from "../../ui/Title/Title";
 
 function Experiences({ activeTheme }) {
   return (

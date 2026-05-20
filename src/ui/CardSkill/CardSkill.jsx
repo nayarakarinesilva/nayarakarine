@@ -1,6 +1,5 @@
 import { Box, Typography } from "@mui/material";
-
-export default function SkillCard({ children, icon: Icon, title, activeTheme }) {
+ const CardSkill = ({ children, icon: Icon, title, activeTheme })=> {
   return (
     <Box
       sx={{
@@ -62,3 +61,6 @@ export default function SkillCard({ children, icon: Icon, title, activeTheme }) 
     </Box>
   );
 }
+
+
+export default CardSkill
