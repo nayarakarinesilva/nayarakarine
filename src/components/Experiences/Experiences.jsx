@@ -1,19 +1,14 @@
 import { Box, Chip, Divider, Typography } from "@mui/material";
-import styles from "./Experiences.module.css";
+// import styles from "./Experiences.module.css";
 import { Description } from "@mui/icons-material";
 import mapExperiences from "../../data/experiences";
+import Title from "../../ui/Title";
 
 function Experiences({ activeTheme }) {
-  
   return (
     <Box sx={{ display: "flex", flexDirection: "column", paddingTop: "80px" }}>
-      <Typography
-        variant="h4"
-        sx={{ textAlign: "center", fontWeight: 600, mb: 3, color: "#7eacb5" }}
-      >
-        Experiências
-      </Typography>
-
+      <Title text="Experiências" />
+      <Divider />
       <Box
         sx={{
           display: "grid",

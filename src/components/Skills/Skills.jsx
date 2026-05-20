@@ -5,6 +5,7 @@ import Grid from "@mui/material/Grid";
 import CodeIcon from "@mui/icons-material/Code";
 import SettingsSuggestIcon from "@mui/icons-material/SettingsSuggest";
 import SkillCard from "../../ui/SkillCard";
+import Title from "../../ui/Title";
 
 export default function Skills({ activeTheme }) {
   const frontSkills = [
@@ -40,9 +41,7 @@ export default function Skills({ activeTheme }) {
           alignItems: "center",
         }}
       >
-        <Typography variant="h4" sx={{ fontWeight: 600,color: "#7eacb5" }}>
-          Habilidades
-        </Typography>
+        <Title text="Habilidades" />
         <Typography>
           Tecnologias e ferramentas que utilizo no dia a dia
         </Typography>

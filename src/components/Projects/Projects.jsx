@@ -13,6 +13,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import ProjectSection from "./ProjectsSections";
+import Title from "../../ui/Title";
 
 export default function Projects({ activeTheme }) {
   const { front, back, fullstack } = projectsData.projects;
@@ -25,12 +26,8 @@ export default function Projects({ activeTheme }) {
 
   return (
     <Box sx={{ display: "flex", flexDirection: "column", padding: 4 }}>
-      <Typography
-        variant="h4"
-        sx={{ textAlign: "center", fontWeight: 600, mb: 3, color: "#7eacb5" }}
-      >
-        Projetos
-      </Typography>
+      <Title text="Projetos" />
+
       <Box sx={{ position: "relative", width: "100%" }}>
         <IconButton
           className="prev"
