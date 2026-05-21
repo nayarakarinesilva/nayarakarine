@@ -40,7 +40,7 @@ function AppContent() {
       </section>
 
       <section id="contact">
-        <Contact />
+        <Contact activeTheme={activeTheme} />
       </section>
 
       <Footer />

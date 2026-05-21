@@ -1,14 +1,15 @@
 import { TextField } from "@mui/material";
 
-const Input = ({ text, activeTheme }) => {
+const TextArea = ({ text, activeTheme }) => {
   return (
     <TextField
+      fullWidth
       label={text}
       variant="filled"
+      multiline
+      rows={6}
       sx={{
-        flex: 1,
         borderRadius: "12px",
-        mb: "20px",
 
         "& .MuiFilledInput-root": {
           backgroundColor: activeTheme === "lightTheme" ? "#FFF" : "#1B1C1C",
@@ -36,12 +37,12 @@ const Input = ({ text, activeTheme }) => {
           },
         },
 
-        "& .MuiInputLabel-root": {
-          color: "#c0c0c0",
-        },
-        
         "& .MuiInputLabel-root.Mui-focused": {
           color: "#910a67",
+        },
+
+        "& .MuiInputLabel-root": {
+          color: "#c0c0c0",
         },
 
         "& .MuiFilledInput-input": {
@@ -52,4 +53,4 @@ const Input = ({ text, activeTheme }) => {
   );
 };
 
-export default Input;
+export default TextArea;
