@@ -1,29 +1,10 @@
 import React, { useState } from "react";
 import { Box, Card, Grid } from "@mui/material";
 
-import { sendContactEmail } from "./services/sendContactEmail";
 import ContactForm from "./ContactForm";
 import ContactInfo from "./ContactInfo";
 
 const Contact = ({ activeTheme }) => {
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [message, setMessage] = useState("");
-
-  const handleSubmit = (event) => {
-    event.preventDefault();
-
-    const emailMessage = `Nome: ${name}\nE-mail: ${email}\nMensagem: ${message}`;
-
-    sendContactEmail(emailMessage);
-    clearFormFields();
-  };
-
-  const clearFormFields = () => {
-    setName("");
-    setEmail("");
-    setMessage("");
-  };
 
   return (
     <Box
@@ -39,7 +20,7 @@ const Contact = ({ activeTheme }) => {
       <Card
         sx={{
           width: "1000px",
-          height: "410px",
+          height: "auto",
           padding: "20px",
           borderRadius: "40px",
           boxShadow: "none",

@@ -1,9 +1,25 @@
 import { TextField } from "@mui/material";
 
-const Input = ({ text, activeTheme }) => {
+const Input = ({
+  text,
+  activeTheme,
+  onChange,
+  value,
+  name,
+  error,
+  helperText,
+  onBlur
+}) => {
+
   return (
     <TextField
+      name={name}
+      value={value}
+      onChange={onChange}
       label={text}
+      error={error}
+      helperText={helperText}
+      onBlur={onBlur}
       variant="filled"
       sx={{
         flex: 1,
@@ -39,7 +55,7 @@ const Input = ({ text, activeTheme }) => {
         "& .MuiInputLabel-root": {
           color: "#c0c0c0",
         },
-        
+
         "& .MuiInputLabel-root.Mui-focused": {
           color: "#910a67",
         },

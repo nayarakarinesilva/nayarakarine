@@ -56,7 +56,6 @@ function Navbar() {
 
   const listMenu = [
     { name: "HOME", href: "#home" },
-    { name: "SOBRE", href: "#about" },
     { name: "HABILIDADES", href: "#skills" },
     { name: "PROJETOS", href: "#projects" },
     { name: "EXPERIÊNCIAS", href: "#experiences" },

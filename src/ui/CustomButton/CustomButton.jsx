@@ -1,6 +1,12 @@
 import { Button } from "@mui/material";
 
-const CustomButton = ({ text, variant = "contained", onClick, ...props }) => {
+const CustomButton = ({
+  text,
+  variant = "contained",
+  onClick,
+  type = "button",
+  ...props
+}) => {
   const styles = {
     contained: {
       backgroundColor: "#910A67",
@@ -25,6 +31,7 @@ const CustomButton = ({ text, variant = "contained", onClick, ...props }) => {
 
   return (
     <Button
+      type={type}
       variant={variant}
       onClick={onClick}
       sx={{

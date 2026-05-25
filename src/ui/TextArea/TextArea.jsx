@@ -1,10 +1,26 @@
 import { TextField } from "@mui/material";
 
-const TextArea = ({ text, activeTheme }) => {
+const TextArea = ({
+  text,
+  activeTheme,
+  name,
+  value,
+  onChange,
+  error,
+  helperText,
+  onBlur,
+}) => {
   return (
     <TextField
+      name={name}
+      value={value}
+      onChange={onChange}
+      label={text}
       fullWidth
       label={text}
+      error={error}
+      helperText={helperText}
+      onBlur={onBlur}
       variant="filled"
       multiline
       rows={6}

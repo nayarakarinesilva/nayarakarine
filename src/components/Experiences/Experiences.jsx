@@ -21,7 +21,10 @@ function Experiences({ activeTheme }) {
         }}
       >
         {mapExperiences.map((item) => (
-          <Box sx={{ display: "flex", flexDirection: "column", gap: 2 }}>
+          <Box
+            key={item.id}
+            sx={{ display: "flex", flexDirection: "column", gap: 2 }}
+          >
             <Box
               sx={{
                 background: item.backgroundChip,
