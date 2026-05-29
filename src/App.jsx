@@ -19,9 +19,14 @@ function AppContent() {
 
   return (
     <div style={global.themes[activeTheme]}>
-      <Navbar />
+      <Navbar activeTheme={activeTheme} />
 
-      <Divider />
+      <Divider
+        sx={{
+          borderColor:
+            activeTheme === "lightTheme" ? "rgba(0, 0, 0, 0.12)" : "#fff",
+        }}
+      />
 
       <section id="home">
         <About activeTheme={activeTheme} />
@@ -42,6 +47,13 @@ function AppContent() {
       <section id="contact">
         <Contact activeTheme={activeTheme} />
       </section>
+
+      <Divider
+        sx={{
+          borderColor:
+            activeTheme === "lightTheme" ? "rgba(0, 0, 0, 0.12)" : "#fff",
+        }}
+      />
 
       <Footer />
     </div>

@@ -1,5 +1,4 @@
 import { useContext } from "react";
-import styles from "./About.module.css";
 import Image from "../../assets/imagePerfil/perfil.jpg";
 import { Box, Button, Card, Typography } from "@mui/material";
 import Grid from "@mui/material/Grid";
@@ -13,8 +12,8 @@ export default function About({ activeTheme }) {
         py: 6,
       }}
     >
-      <Grid container spacing={2} columns={16}>
-        <Grid item xs={8}>
+      <Grid container spacing={4}>
+        <Grid item xs={12} md={6}>
           <Typography
             sx={{
               textTransform: "uppercase",
@@ -27,11 +26,11 @@ export default function About({ activeTheme }) {
             Olá eu Sou
           </Typography>
           <Typography
-            variant="h2"
             sx={{
               fontWeight: 600,
               color: "#910a67",
               marginBottom: "15px",
+              fontSize:{ xs: "34px", md: "40px" },
             }}
           >
             Nayara Karine
@@ -78,12 +77,13 @@ export default function About({ activeTheme }) {
           </Box>
         </Grid>
 
-        <Grid item xs={8}>
+        <Grid item xs={12} md={6}>
           <Box
             sx={{
               position: "relative",
-              width: 420,
-              height: 520,
+              width: "100%",
+              maxWidth: 420,
+              height: { xs: 380, md: 520 },
               mx: "auto",
             }}
           >
@@ -91,28 +91,29 @@ export default function About({ activeTheme }) {
             <Box
               sx={{
                 position: "absolute",
-                width: 350,
-                height: 350,
+                width: { xs: 220, md: 350 },
+                height: { xs: 220, md: 350 },
                 background:
                   activeTheme === "lightTheme" ? "#FCE7F3" : "#910a67",
                 borderRadius: "40px",
-                left: 0,
-                bottom: 60,
+                left: { xs: 10, md: 0 },
+                bottom: { xs: 20, md: 60 },
                 zIndex: 1,
-                filter: "blur(0px)",
               }}
             />
 
-            {/* Card branco */}
+            {/* CARD IMAGEM */}
             <Box
               sx={{
                 position: "absolute",
-                width: 350,
-                borderRadius: "30px",
-                right: 30,
-                top: "15%",
+                width: { xs: "55%", md: "85%" },
+                maxWidth: 350,
+                right: { xs: "140px", md: 30 },
+                top: { xs: "30%", md: "15%" },
                 zIndex: 2,
+                borderRadius: "30px",
                 boxShadow: "0 25px 80px rgba(0,0,0,0.10)",
+                overflow: "hidden",
               }}
             >
               <Box
@@ -121,47 +122,12 @@ export default function About({ activeTheme }) {
                 alt="Portfolio"
                 sx={{
                   width: "100%",
-                  borderRadius: "20px",
+                  height: "auto",
                   display: "block",
                 }}
               />
             </Box>
           </Box>
-          {/* <section className={styles.about_container_links}>
-            <h2>Acesse minhas redes:</h2>
-            <div className={styles.linkContainer}>
-              <div className={styles.link}>
-                <a
-                  href="https://github.com/nayarakarinesilva"
-                  aria-label="GitHub"
-                  target="blanck"
-                >
-                  <i className="bi bi-github"></i>
-                  <span>GitHub</span>
-                </a>
-              </div>
-              <div className={styles.link}>
-                <a
-                  href="https://www.linkedin.com/in/nayarakarine-silva/"
-                  aria-label="LinkedIn"
-                  target="blanck"
-                >
-                  <i className="bi bi-linkedin"></i>
-                  <span>LinkedIn</span>
-                </a>
-              </div>
-              <div className={styles.link}>
-                <a
-                  href="https://www.instagram.com/nayarakarine.silva/"
-                  aria-label="Instagram"
-                  target="blanck"
-                >
-                  <i className="bi bi-instagram"></i>
-                  <span>Instagram</span>
-                </a>
-              </div>
-            </div>
-          </section> */}
         </Grid>
       </Grid>
     </Box>

@@ -1,14 +1,39 @@
-import styles from "./Footer.module.css";
+import { Box, Typography } from "@mui/material";
+import Logo from "../../assets/logo.svg";
 
 function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <div className={styles.footer_container}>
-      <p>
-        &copy; {currentYear} Desenvolvido por <a href="">Nayara Karine</a>
-      </p>
-    </div>
+    <Box
+      sx={{
+        display: "flex",
+        justifyContent: "space-between",
+        padding: "30px",
+        color: "#666666",
+      }}
+    >
+      <Box
+        sx={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          gap: "25px",
+        }}
+      >
+        <img src={Logo} alt="Logo" style={{ height: 50 }} />
+        <Typography>
+          &copy; {currentYear} Desenvolvido por Nayara Karine
+        </Typography>
+      </Box>
+      <Box sx={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+        }}>
+        <Typography>Desenvolvido com ❤️ e muito código</Typography>
+      </Box>
+    </Box>
   );
 }
 

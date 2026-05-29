@@ -15,6 +15,7 @@ const Contact = ({ activeTheme }) => {
         justifyContent: "center",
         alignItems: "center",
         marginTop: "80px",
+        marginBottom: "80px",
       }}
     >
       <Card

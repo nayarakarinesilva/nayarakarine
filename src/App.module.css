@@ -2,42 +2,17 @@
   font-family: Arial, sans-serif;
 }
 
-body.temaClaro {
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+body.lightTheme {
   background-color: #fff;
   color: #333;
 }
 
-body.temaEscuro {
+body.darkTheme {
   background-color: #1b1c1c;
   color: #fff;
-}
-
-.App {
-  text-align: center;
-}
-
-/* Media Queries */
-@media (max-width: 768px) {
-  .App {
-    padding: 10px;
-  }
-}
-
-@media (max-width: 768px) {
-  body {
-    font-size: 14px;
-  }
-}
-
-@media (max-width: 480px) {
-  body {
-    font-size: 12px;
-  }
-}
-
-@media (prefers-color-scheme: dark) {
-  body {
-    background-color: #1b1c1c;
-    color: #eeedeb;
-  }
 }

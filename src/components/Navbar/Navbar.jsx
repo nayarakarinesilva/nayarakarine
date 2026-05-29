@@ -1,25 +1,28 @@
 // components/Navbar.js
 import React, { useContext, useEffect, useState } from "react";
-import styles from "./Navbar.module.css";
 import Logo from "../../assets/logo.svg";
 import AppBar from "@mui/material/AppBar";
 import Toolbar from "@mui/material/Toolbar";
-import List from "@mui/material/List";
-import ListItem from "@mui/material/ListItem";
-import ListItemButton from "@mui/material/ListItemButton";
-import ListItemText from "@mui/material/ListItemText";
-import { Typography, Box } from "@mui/material";
+import { Typography, Box, MenuItem, Menu } from "@mui/material";
 import IconButton from "@mui/material/IconButton";
 import DarkModeIcon from "@mui/icons-material/DarkMode";
 import LightModeIcon from "@mui/icons-material/LightMode";
+import NavbarMenu from "./NavbarMenu";
+import NavbarMobileMenu from "./NavbarMobileMenu";
 import { GlobalContext } from "../../context/GlobalContext";
 
-function Navbar() {
+function Navbar({ activeTheme }) {
   const global = useContext(GlobalContext);
-
   const [isOpen, setIsOpen] = useState(false);
+  const [anchorEl, setAnchorEl] = useState(null);
 
-  const activeTheme = global.activeTheme;
+  const handleOpen = (event) => {
+    setAnchorEl(event.currentTarget);
+  };
+
+  const handleClose = () => {
+    setAnchorEl(null);
+  };
 
   useEffect(() => {
     function initScrollSoft() {
@@ -64,21 +67,7 @@ function Navbar() {
 
   // !Ajustar o botão de menu no mobile
   return (
-    // <nav className={`${styles.navbar} js-menu`}>
-    <nav>
-      {/* {!isOpen && <img src={Logo} alt="Logo" />} */}
-
-      {/* O botão só é exibido se o menu não estiver aberto */}
-      {!isOpen && (
-        <button
-          className={styles.menuToggle}
-          onClick={() => setIsOpen(!isOpen)}
-        >
-          ☰ {/* Ícone de menu */}
-        </button>
-      )}
-      {/* <ul className={`${isOpen ? styles.open : styles.closed}`}> */}
-
+    <>
       <AppBar
         position="static"
         sx={{
@@ -88,7 +77,13 @@ function Navbar() {
           marginBottom: "6px",
         }}
       >
-        <Toolbar sx={{ display: "flex", justifyContent: "space-between" }}>
+        <Toolbar
+          sx={{
+            display: "flex",
+            justifyContent: "space-between",
+            alignItems: "center",
+          }}
+        >
           <Box sx={{ display: "flex", gap: "20px" }}>
             {/* Logo */}
             <img src={Logo} alt="Logo" style={{ height: 50 }} />
@@ -110,48 +105,12 @@ function Navbar() {
           </Box>
 
           {/* Menu */}
-          <List sx={{ display: "flex", gap: 2 }}>
-            {listMenu.map((item) => (
-              <ListItem key={item.name} disablePadding>
-                <ListItemButton
-                  component="a"
-                  href={item.href}
-                  sx={{
-                    letterSpacing: "0.5px",
-                    lineHeight: "20px",
-
-                    "& .MuiTypography-root": {
-                      transition: "color 0.3s ease",
-                    },
-                    "&:hover": {
-                      backgroundColor:
-                        activeTheme === "lightTheme"
-                          ? "#8325811a"
-                          : "rgba(131, 37, 129, 0.25)",
-                      boxShadow:
-                        activeTheme === "lightTheme"
-                          ? "none"
-                          : "0 0 12px rgba(255, 0, 255, 0.4), 0 0 24px rgba(131, 37, 129, 0.6)",
-                      "& .MuiTypography-root": {
-                        color: "#910a67",
-                        textDecoration: "underline",
-                      },
-                    },
-                  }}
-                >
-                  <Typography
-                    sx={{
-                      fontSize: "0.8rem",
-                      fontWeight: 700,
-                      color: activeTheme === "lightTheme" ? "#333" : "#FDF2F8",
-                    }}
-                  >
-                    {item.name}
-                  </Typography>
-                </ListItemButton>
-              </ListItem>
-            ))}
-          </List>
+          <NavbarMenu
+            activeTheme={activeTheme}
+            listMenu={listMenu}
+            isOpen={isOpen}
+            sx={{ display: { xs: "none", md: "flex" } }}
+          />
           <IconButton onClick={global.toggleTheme} color="inherit">
             {activeTheme === "lightTheme" ? (
               <DarkModeIcon />
@@ -159,9 +118,22 @@ function Navbar() {
               <LightModeIcon />
             )}
           </IconButton>
+          <IconButton
+            onClick={handleOpen}
+            sx={{ display: { xs: "block", md: "none" } }}
+          >
+            ☰
+          </IconButton>
         </Toolbar>
       </AppBar>
-    </nav>
+
+      <NavbarMobileMenu
+        activeTheme={activeTheme}
+        listMenu={listMenu}
+        handleClose={handleClose}
+        anchorEl={anchorEl}
+      />
+    </>
   );
 }
 
