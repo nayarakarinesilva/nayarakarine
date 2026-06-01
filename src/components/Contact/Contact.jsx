@@ -1,10 +1,12 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import { Box, Card, Grid } from "@mui/material";
 
 import ContactForm from "./ContactForm";
 import ContactInfo from "./ContactInfo";
+import { GlobalContext } from "../../context/GlobalContext";
 
-const Contact = ({ activeTheme }) => {
+const Contact = () => {
+  const { activeTheme } = useContext(GlobalContext);
 
   return (
     <Box
@@ -48,42 +50,6 @@ const Contact = ({ activeTheme }) => {
           <ContactForm activeTheme={activeTheme} />
         </Grid>
       </Card>
-
-      {/* FAZER A LÓGICA DOS INPUTS */}
-
-      {/* <section>
-        <h2>Entre em Contato</h2>
-        <p>
-          Estou disponível para novos projetos e oportunidades. Sinta-se à
-          vontade para entrar em contato comigo!
-        </p>
-        <form id="contact-form" onSubmit={handleSubmit}>
-          <input
-            type="text"
-            name="name"
-            value={name}
-            onChange={(e) => setName(e.target.value)}
-            placeholder="Seu Nome"
-            required
-          />
-          <input
-            type="email"
-            name="email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            placeholder="Seu Email"
-            required
-          />
-          <textarea
-            name="message"
-            value={message}
-            onChange={(e) => setMessage(e.target.value)}
-            placeholder="Sua Mensagem"
-            required
-          ></textarea>
-          <button type="submit">Enviar Mensagem</button>
-        </form>
-      </section> */}
     </Box>
   );
 };

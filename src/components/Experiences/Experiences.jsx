@@ -1,9 +1,13 @@
+import React, { useContext } from "react";
 import { Box, Chip, Divider, Typography } from "@mui/material";
 import { Description } from "@mui/icons-material";
 import mapExperiences from "./data/experiencesData";
 import Title from "../../ui/Title/Title";
+import { GlobalContext } from "../../context/GlobalContext";
 
-function Experiences({ activeTheme }) {
+function Experiences() {
+  const { activeTheme } = useContext(GlobalContext);
+
   return (
     <Box sx={{ display: "flex", flexDirection: "column", paddingTop: "80px" }}>
       <Title text="Experiências" />

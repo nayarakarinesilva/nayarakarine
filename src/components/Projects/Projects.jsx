@@ -1,5 +1,5 @@
-import React from "react";
-import projectsData from "../../mock/ProjectsData.json";
+import React, { useContext } from "react";
+import projectsData from "./data/projectsData.json";
 import { Box, Typography } from "@mui/material";
 
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -14,8 +14,11 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import ProjectSection from "./ProjectsSections";
 import Title from "../../ui/Title/Title";
+import { GlobalContext } from "../../context/GlobalContext";
 
-export default function Projects({ activeTheme }) {
+export default function Projects() {
+  const { activeTheme } = useContext(GlobalContext);
+
   const { front, back, fullstack } = projectsData.projects;
 
   const sections = [

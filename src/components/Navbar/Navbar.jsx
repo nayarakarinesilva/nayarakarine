@@ -11,8 +11,10 @@ import NavbarMenu from "./NavbarMenu";
 import NavbarMobileMenu from "./NavbarMobileMenu";
 import { GlobalContext } from "../../context/GlobalContext";
 
-function Navbar({ activeTheme }) {
+function Navbar() {
   const global = useContext(GlobalContext);
+  const { activeTheme } = useContext(GlobalContext);
+
   const [isOpen, setIsOpen] = useState(false);
   const [anchorEl, setAnchorEl] = useState(null);
 

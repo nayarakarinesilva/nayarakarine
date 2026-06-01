@@ -19,7 +19,7 @@ function AppContent() {
 
   return (
     <div style={global.themes[activeTheme]}>
-      <Navbar activeTheme={activeTheme} />
+      <Navbar />
 
       <Divider
         sx={{
@@ -29,23 +29,23 @@ function AppContent() {
       />
 
       <section id="home">
-        <About activeTheme={activeTheme} />
+        <About />
       </section>
 
       <section id="skills">
-        <Skills activeTheme={activeTheme} />
+        <Skills />
       </section>
 
       <section id="projects">
-        <Projects activeTheme={activeTheme} />
+        <Projects />
       </section>
 
       <section id="experiences">
-        <Experiences activeTheme={activeTheme} />
+        <Experiences />
       </section>
 
       <section id="contact">
-        <Contact activeTheme={activeTheme} />
+        <Contact />
       </section>
 
       <Divider

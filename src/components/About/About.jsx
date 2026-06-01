@@ -3,8 +3,11 @@ import Image from "../../assets/imagePerfil/perfil.jpg";
 import { Box, Button, Card, Typography } from "@mui/material";
 import Grid from "@mui/material/Grid";
 import CustomButton from "../../ui/CustomButton/CustomButton";
+import { GlobalContext } from "../../context/GlobalContext";
 
-export default function About({ activeTheme }) {
+export default function About() {
+  const { activeTheme } = useContext(GlobalContext);
+
   return (
     <Box
       sx={{
@@ -30,7 +33,7 @@ export default function About({ activeTheme }) {
               fontWeight: 600,
               color: "#910a67",
               marginBottom: "15px",
-              fontSize:{ xs: "34px", md: "40px" },
+              fontSize: { xs: "34px", md: "40px" },
             }}
           >
             Nayara Karine

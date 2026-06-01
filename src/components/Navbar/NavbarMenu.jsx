@@ -10,7 +10,7 @@ const NavbarMenu = ({ activeTheme, listMenu, isOpen }) => {
       }}
     >
       {listMenu.map((item) => (
-        <ListItem disablePadding>
+        <ListItem key={item.name} disablePadding>
           <ListItemButton
             component="a"
             href={item.href}
