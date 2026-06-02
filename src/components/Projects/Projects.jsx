@@ -62,8 +62,6 @@ export default function Projects() {
           <ArrowForwardIosIcon sx={{ color: "#910a67" }} />
         </IconButton>
         <Swiper
-          className="meu-swiper"
-          slidesPerView={3}
           spaceBetween={20}
           navigation={{
             prevEl: ".prev",
@@ -71,10 +69,16 @@ export default function Projects() {
           }}
           pagination={{ clickable: true }}
           modules={[Navigation, Pagination]}
-          sx={{
-            width: "100%",
-            maxWidth: "100%",
-            overflow: "hidden",
+          breakpoints={{
+            0: {
+              slidesPerView: 1,
+            },
+            768: {
+              slidesPerView: 2,
+            },
+            1200: {
+              slidesPerView: 3,
+            },
           }}
         >
           {sections.map((section) =>

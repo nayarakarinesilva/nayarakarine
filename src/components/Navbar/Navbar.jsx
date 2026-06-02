@@ -122,7 +122,7 @@ function Navbar() {
           </IconButton>
           <IconButton
             onClick={handleOpen}
-            sx={{ display: { xs: "block", md: "none" } }}
+            sx={{ display: { xs: "block", md: "none" },color: "#910a67" }}
           >
             ☰
           </IconButton>

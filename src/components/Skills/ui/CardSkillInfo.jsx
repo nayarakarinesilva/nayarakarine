@@ -18,6 +18,7 @@ const CardSkillInfo = ({ image, text, alt }) => {
       <Typography
         variant="subtitle2"
         sx={{
+          fontSize: { xs: "13px", sm: "16px" },
           fontWeight: 600,
           color: activeTheme === "lightTheme" ? "#333333" : "#FDF2F8",
         }}

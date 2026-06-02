@@ -11,14 +11,14 @@ import Projects from "./components/Projects/Projects";
 import Experiences from "./components/Experiences/Experiences";
 import Footer from "./components/Footer/Footer";
 
-import { Divider } from "@mui/material";
+import { Box, Divider } from "@mui/material";
 
 function AppContent() {
   const global = useContext(GlobalContext);
   const activeTheme = global.activeTheme;
 
   return (
-    <div style={global.themes[activeTheme]}>
+    <Box style={global.themes[activeTheme]}>
       <Navbar />
 
       <Divider
@@ -28,25 +28,25 @@ function AppContent() {
         }}
       />
 
-      <section id="home">
+      <Box id="home">
         <About />
-      </section>
+      </Box>
 
-      <section id="skills">
+      <Box id="skills">
         <Skills />
-      </section>
+      </Box>
 
-      <section id="projects">
+      <Box id="projects" sx={{ paddingTop: { xs: "400px", sm: "20px" } }}>
         <Projects />
-      </section>
+      </Box>
 
-      <section id="experiences">
+      <Box id="experiences">
         <Experiences />
-      </section>
+      </Box>
 
-      <section id="contact">
+      <Box id="contact">
         <Contact />
-      </section>
+      </Box>
 
       <Divider
         sx={{
@@ -56,7 +56,7 @@ function AppContent() {
       />
 
       <Footer />
-    </div>
+    </Box>
   );
 }
 

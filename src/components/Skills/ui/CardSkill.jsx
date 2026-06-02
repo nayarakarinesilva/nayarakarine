@@ -1,10 +1,10 @@
 import { Box, Typography } from "@mui/material";
- const CardSkill = ({ children, icon: Icon, title, activeTheme })=> {
+const CardSkill = ({ children, icon: Icon, title, activeTheme }) => {
   return (
     <Box
       sx={{
         padding: "20px",
-        height: "230px",
+        minHeight: { xs: "auto", sm: "300px" },
         border:
           activeTheme === "lightTheme"
             ? "solid 1px #F3F4F6"
@@ -20,6 +20,7 @@ import { Box, Typography } from "@mui/material";
           alignItems: "center",
           justifyContent: "center",
           gap: "15px",
+          marginBottom:"25px"
         }}
       >
         <Box
@@ -40,7 +41,7 @@ import { Box, Typography } from "@mui/material";
           sx={{
             color: activeTheme === "lightTheme" ? "#333333" : "#FDF2F8",
             fontWeight: 600,
-            textTransform:"uppercase"
+            textTransform: "uppercase",
           }}
         >
           {title}
@@ -49,10 +50,14 @@ import { Box, Typography } from "@mui/material";
       <Box
         sx={{
           display: "grid",
-          gridTemplateColumns: "repeat(4, 1fr)",
+          gridTemplateColumns: {
+            xs: "repeat(2, 1fr)",
+            sm: "repeat(3, 1fr)",
+            md: "repeat(4, 1fr)",
+          },
           justifyItems: "center",
-          gap: 2,
-          p: 3,
+          gap: { xs: 1.5, md: 2 },
+          p: { xs: 2, md: 3 },
           color: "#6B7280",
         }}
       >
@@ -60,7 +65,6 @@ import { Box, Typography } from "@mui/material";
       </Box>
     </Box>
   );
-}
+};
 
-
-export default CardSkill
+export default CardSkill;

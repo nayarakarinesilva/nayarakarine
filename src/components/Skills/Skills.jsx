@@ -28,13 +28,13 @@ export default function Skills() {
         }}
       >
         <Title text="Habilidades" />
-        <Typography>
+        <Typography sx={{ fontSize: { xs: "14px", sm: "16px" } }}>
           Tecnologias e ferramentas que utilizo no dia a dia
         </Typography>
       </Box>
 
       <Grid container spacing={2} columns={16} sx={{ px: 4, mt: 2 }}>
-        <Grid item xs={8}>
+        <Grid item xs={16} md={8}>
           <CardSkill
             icon={CodeIcon}
             title={"Front-end"}
@@ -51,7 +51,7 @@ export default function Skills() {
           </CardSkill>
         </Grid>
 
-        <Grid item xs={8}>
+        <Grid item xs={16} md={8}>
           <CardSkill
             icon={SettingsSuggestIcon}
             title={"Ferramentas"}

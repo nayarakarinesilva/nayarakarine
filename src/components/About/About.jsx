@@ -109,9 +109,9 @@ export default function About() {
             <Box
               sx={{
                 position: "absolute",
-                width: { xs: "55%", md: "85%" },
+                width: { xs: 220, md: 350 },
                 maxWidth: 350,
-                right: { xs: "140px", md: 30 },
+                right: { xs: "110px", md: 30 },
                 top: { xs: "30%", md: "15%" },
                 zIndex: 2,
                 borderRadius: "30px",
