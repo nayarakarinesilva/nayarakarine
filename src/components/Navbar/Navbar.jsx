@@ -1,20 +1,30 @@
 // components/Navbar.js
-import React, { useEffect, useState } from "react";
-import styles from "./Navbar.module.css";
+import React, { useContext, useEffect, useState } from "react";
 import Logo from "../../assets/logo.svg";
 import AppBar from "@mui/material/AppBar";
 import Toolbar from "@mui/material/Toolbar";
-import List from "@mui/material/List";
-import ListItem from "@mui/material/ListItem";
-import ListItemButton from "@mui/material/ListItemButton";
-import ListItemText from "@mui/material/ListItemText";
-import { Typography, Box } from "@mui/material";
+import { Typography, Box, MenuItem, Menu } from "@mui/material";
 import IconButton from "@mui/material/IconButton";
 import DarkModeIcon from "@mui/icons-material/DarkMode";
 import LightModeIcon from "@mui/icons-material/LightMode";
+import NavbarMenu from "./NavbarMenu";
+import NavbarMobileMenu from "./NavbarMobileMenu";
+import { GlobalContext } from "../../context/GlobalContext";
 
-function Navbar({ toggleTheme, activeTheme }) {
+function Navbar() {
+  const global = useContext(GlobalContext);
+  const { activeTheme } = useContext(GlobalContext);
+
   const [isOpen, setIsOpen] = useState(false);
+  const [anchorEl, setAnchorEl] = useState(null);
+
+  const handleOpen = (event) => {
+    setAnchorEl(event.currentTarget);
+  };
+
+  const handleClose = () => {
+    setAnchorEl(null);
+  };
 
   useEffect(() => {
     function initScrollSoft() {
@@ -51,7 +61,6 @@ function Navbar({ toggleTheme, activeTheme }) {
 
   const listMenu = [
     { name: "HOME", href: "#home" },
-    { name: "SOBRE", href: "#about" },
     { name: "HABILIDADES", href: "#skills" },
     { name: "PROJETOS", href: "#projects" },
     { name: "EXPERIÊNCIAS", href: "#experiences" },
@@ -60,31 +69,23 @@ function Navbar({ toggleTheme, activeTheme }) {
 
   // !Ajustar o botão de menu no mobile
   return (
-    // <nav className={`${styles.navbar} js-menu`}>
-    <nav>
-      {/* {!isOpen && <img src={Logo} alt="Logo" />} */}
-
-      {/* O botão só é exibido se o menu não estiver aberto */}
-      {!isOpen && (
-        <button
-          className={styles.menuToggle}
-          onClick={() => setIsOpen(!isOpen)}
-        >
-          ☰ {/* Ícone de menu */}
-        </button>
-      )}
-      {/* <ul className={`${isOpen ? styles.open : styles.closed}`}> */}
-
+    <>
       <AppBar
         position="static"
         sx={{
           background: activeTheme === "lightTheme" ? "#fff" : "#1B1C1C",
-          color: activeTheme === "lightTheme" ? "#000" : "#fff",
+          color: activeTheme === "lightTheme" ? "#333" : "#FDF2F8",
           boxShadow: "none",
           marginBottom: "6px",
         }}
       >
-        <Toolbar sx={{ display: "flex", justifyContent: "space-between" }}>
+        <Toolbar
+          sx={{
+            display: "flex",
+            justifyContent: "space-between",
+            alignItems: "center",
+          }}
+        >
           <Box sx={{ display: "flex", gap: "20px" }}>
             {/* Logo */}
             <img src={Logo} alt="Logo" style={{ height: 50 }} />
@@ -92,13 +93,13 @@ function Navbar({ toggleTheme, activeTheme }) {
               <Typography
                 sx={{
                   fontWeight: 600,
-                  color: activeTheme === "lightTheme" ? "#000" : "#fff",
+                  color: activeTheme === "lightTheme" ? "#333" : "#FDF2F8",
                 }}
               >
                 NAYARA KARINE
               </Typography>
               <Typography
-                sx={{ fontSize: "0.8rem", fontWeight: 600, color: "#832581" }}
+                sx={{ fontSize: "0.8rem", fontWeight: 600, color: "#910a67" }}
               >
                 Desenvolvedora Front-end
               </Typography>
@@ -106,54 +107,35 @@ function Navbar({ toggleTheme, activeTheme }) {
           </Box>
 
           {/* Menu */}
-          <List sx={{ display: "flex", gap: 2 }}>
-            {listMenu.map((item) => (
-              <ListItem key={item.name} disablePadding>
-                <ListItemButton
-                  component="a"
-                  href={item.href}
-                  sx={{
-                    letterSpacing: "0.5px",
-                    lineHeight: "20px",
-
-                    "& .MuiTypography-root": {
-                      transition: "color 0.3s ease",
-                    },
-                    "&:hover": {
-                      backgroundColor:
-                        activeTheme === "lightTheme"
-                          ? "#8325811a"
-                          : "rgba(131, 37, 129, 0.25)",
-                      boxShadow:
-                        activeTheme === "lightTheme"
-                          ? "none"
-                          : "0 0 12px rgba(255, 0, 255, 0.4), 0 0 24px rgba(131, 37, 129, 0.6)",
-                      "& .MuiTypography-root": {
-                        color: "#832581",
-                        textDecoration: "underline",
-                      },
-                    },
-                  }}
-                >
-                  <Typography
-                    sx={{
-                      fontSize: "0.8rem",
-                      fontWeight: 700,
-                      color: activeTheme === "lightTheme" ? "#333" : "#fff",
-                    }}
-                  >
-                    {item.name}
-                  </Typography>
-                </ListItemButton>
-              </ListItem>
-            ))}
-          </List>
-          <IconButton onClick={toggleTheme} color="inherit">
-            {activeTheme === "lightTheme" ? <DarkModeIcon /> : <LightModeIcon />}
+          <NavbarMenu
+            activeTheme={activeTheme}
+            listMenu={listMenu}
+            isOpen={isOpen}
+            sx={{ display: { xs: "none", md: "flex" } }}
+          />
+          <IconButton onClick={global.toggleTheme} color="inherit">
+            {activeTheme === "lightTheme" ? (
+              <DarkModeIcon />
+            ) : (
+              <LightModeIcon />
+            )}
+          </IconButton>
+          <IconButton
+            onClick={handleOpen}
+            sx={{ display: { xs: "block", md: "none" },color: "#910a67" }}
+          >
+            ☰
           </IconButton>
         </Toolbar>
       </AppBar>
-    </nav>
+
+      <NavbarMobileMenu
+        activeTheme={activeTheme}
+        listMenu={listMenu}
+        handleClose={handleClose}
+        anchorEl={anchorEl}
+      />
+    </>
   );
 }
 

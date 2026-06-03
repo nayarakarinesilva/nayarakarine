@@ -1,6 +1,7 @@
-// App.js
-import React, { useState, useEffect } from "react";
+import React, { useContext } from "react";
 import "./App.module.css";
+
+import { GlobalProvider, GlobalContext } from "./context/GlobalContext";
 
 import Navbar from "./components/Navbar/Navbar";
 import About from "./components/About/About";
@@ -9,59 +10,61 @@ import Skills from "./components/Skills/Skills";
 import Projects from "./components/Projects/Projects";
 import Experiences from "./components/Experiences/Experiences";
 import Footer from "./components/Footer/Footer";
-import { Divider } from "@mui/material";
 
-function App() {
-  const [activeTheme, setActiveTheme] = useState("lightTheme");
+import { Box, Divider } from "@mui/material";
 
-  const themes = {
-    darkTheme: {
-      backgroundColor: "#1B1C1C",
-      color: "#FDF2F8",
-    },
-
-    lightTheme: {
-      backgroundColor: "#fff",
-      color: "#333",
-    },
-  };
-
-  const toggleTheme = () => {
-    setActiveTheme((prev) =>
-      prev === "lightTheme" ? "darkTheme" : "lightTheme",
-    );
-  };
-
-  useEffect(() => {
-    document.body.className = activeTheme;
-  }, [activeTheme]);
+function AppContent() {
+  const global = useContext(GlobalContext);
+  const activeTheme = global.activeTheme;
 
   return (
-    <div style={themes[activeTheme]}>
-      <Navbar toggleTheme={toggleTheme} activeTheme={activeTheme} />
-      <Divider />
-      <section id="home">
-        <About toggleTheme={toggleTheme} activeTheme={activeTheme} />
-      </section>
+    <Box style={global.themes[activeTheme]}>
+      <Navbar />
 
-      <section id="skills">
+      <Divider
+        sx={{
+          borderColor:
+            activeTheme === "lightTheme" ? "rgba(0, 0, 0, 0.12)" : "#fff",
+        }}
+      />
+
+      <Box id="home">
+        <About />
+      </Box>
+
+      <Box id="skills">
         <Skills />
-      </section>
+      </Box>
 
-      <section id="projects">
+      <Box id="projects" sx={{ paddingTop: { xs: "400px", sm: "20px" } }}>
         <Projects />
-      </section>
+      </Box>
 
-      <section id="experiences">
+      <Box id="experiences">
         <Experiences />
-      </section>
+      </Box>
 
-      <section id="contact">
+      <Box id="contact">
         <Contact />
-      </section>
+      </Box>
+
+      <Divider
+        sx={{
+          borderColor:
+            activeTheme === "lightTheme" ? "rgba(0, 0, 0, 0.12)" : "#fff",
+        }}
+      />
 
       <Footer />
-    </div>
+    </Box>
+  );
+}
+
+function App() {
+  return (
+    <GlobalProvider>
+      <AppContent />
+    </GlobalProvider>
   );
 }
 

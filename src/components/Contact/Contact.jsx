@@ -1,84 +1,59 @@
-import React, { useState } from "react";
-import styles from "./Contact.module.css";
+import React, { useState, useContext } from "react";
+import { Box, Card, Grid } from "@mui/material";
 
-export default function Contact() {
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [message, setMessage] = useState("");
+import ContactForm from "./ContactForm";
+import ContactInfo from "./ContactInfo";
+import { GlobalContext } from "../../context/GlobalContext";
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
-
-    const emailMessage = `Nome: ${name}\nE-mail: ${email}\nMensagem: ${message}`;
-    
-    sendEmail(emailMessage);
-    clearFormFields();
-  };
-  
-  const sendEmail = (message) => {  // Ajuste aqui
-    const form = new FormData();
-    form.append("message", message);
-  
-    fetch("https://formspree.io/f/meqyyezp", {
-      method: "POST",
-      body: form,
-    })
-    .then((response) => {
-      if (!response.ok) {
-        return response.json().then(data => {
-          throw new Error(data.error || "Erro ao enviar a mensagem.");
-        });
-      }
-    })
-    .catch((error) => {
-      console.error("Erro:", error);
-      alert("Mensagem enviada com sucesso!");
-    });
-  };
-  
-  const clearFormFields = () => {
-    setName("");
-    setEmail("");
-    setMessage("");
-  };
+const Contact = () => {
+  const { activeTheme } = useContext(GlobalContext);
 
   return (
-    <div className={styles.contact_container}>
-      <h1>Contato</h1>
+    <Box
+      sx={{
+        padding: "30px",
+        display: "flex",
+        flexDirection: "column",
+        justifyContent: "center",
+        alignItems: "center",
+        marginTop: "80px",
+        marginBottom: "80px",
+      }}
+    >
+      <Card
+        sx={{
+          width: {
+            xs: "100%",
+            md: "1000px",
+          },
+          height: "auto",
+          padding: "20px",
+          borderRadius: "40px",
+          boxShadow: "none",
+          boxShadow: "0 2px 8px rgba(0,0,0,0.1)",
+          border: activeTheme === "lightTheme" ? "none" : "solid 1px #910a67",
+          background:
+            activeTheme === "lightTheme"
+              ? `linear-gradient(
+                        135deg,
+                      #FDF2F8,
+                      #FBF3F9,
+                      #F5F4FC,
+                      #F0F6FE,
+                      #EFF6FF
+                      )`
+              : "#910a6721",
+        }}
+      >
+        <Grid container spacing={{ xs: 3, md: 6 }} p={{ xs: 1, md: 2 }}>
+          {/* Informações */}
+          <ContactInfo activeTheme={activeTheme} />
 
-      <section>
-        <h2>Entre em Contato</h2>
-        <p>
-          Estou disponível para novos projetos e oportunidades. Sinta-se à
-          vontade para entrar em contato comigo!
-        </p>
-        <form id="contact-form" onSubmit={handleSubmit}>
-          <input
-            type="text"
-            name="name"
-            value={name}
-            onChange={(e) => setName(e.target.value)}
-            placeholder="Seu Nome"
-            required
-          />
-          <input
-            type="email"
-            name="email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            placeholder="Seu Email"
-            required
-          />
-          <textarea
-            name="message"
-            value={message}
-            onChange={(e) => setMessage(e.target.value)}
-            placeholder="Sua Mensagem"
-            required
-          ></textarea>
-          <button type="submit">Enviar Mensagem</button>
-        </form>
-      </section>
-    </div>
+          {/* Form */}
+          <ContactForm activeTheme={activeTheme} />
+        </Grid>
+      </Card>
+    </Box>
   );
-}
+};
+export default Contact;

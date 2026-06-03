@@ -1,72 +1,86 @@
 import React, { useState } from "react";
-import projectsData from "../../mock/ProjectsData.json";
 import ImagesWork from "../../assets/ImageWork";
-import styles from "./Projects.module.css";
-
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faChevronUp, faChevronDown } from "@fortawesome/free-solid-svg-icons";
+import { Box, Typography } from "@mui/material";
+import styles from "./css/Projects.module.css";
 
 
-function ProjectSection({ title, projects }) {
-  const [isVisible, setIsVisible] = useState(false);
-
-  const toggle = () => setIsVisible((prev) => !prev);
+function ProjectSection({ project, activeTheme }) {
 
   return (
-    <section>
-      <h2 onClick={toggle} style={{ cursor: "pointer" }}>
-        {title}{" "}
-        <FontAwesomeIcon icon={isVisible ? faChevronUp : faChevronDown} />
-      </h2>
+    <Box
+      sx={{
+        padding: 1,
+        borderRadius: 2,
+        border:
+          activeTheme === "lightTheme"
+            ? "solid 1px #F3F4F6"
+            : "solid 1px #910a67",
+        textAlign: "center",
+        height: "400px",
+        display: "flex",
+        flexDirection: "column",
+        justifyContent: "center",
+      }}
+    >
+      <Box key={project.id}>
+        <Typography variant="subtitle1" sx={{ fontWeight: 600 }}>
+          {project.title}
+        </Typography>
 
-      {isVisible && (
-        <div className={styles.projects_grid}>
-          {projects.map((project) => (
-            <div key={project.id} className={styles.project_card}>
-              <h3>{project.title}</h3>
+        {ImagesWork[project.id] && (
+          <Box sx={{ margin: "15px 0 15px 0" }}>
+            <img src={ImagesWork[project.id]} alt={project.title} width={200} />
+          </Box>
+        )}
 
-              {ImagesWork[project.id] && (
-                <div>
-                  <img
-                    src={ImagesWork[project.id]}
-                    alt={project.title}
-                    className="product-image"
-                  />
-                </div>
-              )}
+        <Typography
+          variant="subtitle2"
+          sx={{
+            color: activeTheme === "lightTheme" ? "#666666" : "#FDF2F8",
+          }}
+        >
+          <strong>Descrição:</strong> {project.description}
+        </Typography>
 
-              <p>
-                <strong>Descrição:</strong> {project.description}
-              </p>
-
-              <div className={styles.project_links}>
-                {project.links.project && (
-                  <a
-                    href={project.links.project}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    Ver Projeto
-                  </a>
-                )}
-                {project.links.project && project.links.repository && (
-                  <span> | </span>
-                )}
-                {project.links.repository && (
-                  <a
-                    href={project.links.repository}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    Ver Repositório
-                  </a>
-                )}
-              </div>
-            </div>
-          ))}
-        </div>
-      )}
-    </section>
+        <Box
+          sx={{
+            display: "flex",
+            justifyContent: "space-around",
+            marginTop: "20px",
+            color: "#910a67",
+          }}
+        >
+          {project.links.project && (
+            <a
+              href={project.links.project}
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{
+                fontWeight: 600,
+                color: "#910a67",
+                fontSize: "14px",
+              }}
+            >
+              Ver Projeto
+            </a>
+          )}
+          {project.links.repository && (
+            <a
+              href={project.links.repository}
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{
+                fontWeight: 600,
+                color: "#910a67",
+                fontSize: "14px",
+              }}
+            >
+              Ver Repositório
+            </a>
+          )}
+        </Box>
+      </Box>
+    </Box>
   );
 }
 
