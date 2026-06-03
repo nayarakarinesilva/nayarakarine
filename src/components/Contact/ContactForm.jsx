@@ -18,7 +18,14 @@ const ContactForm = ({ activeTheme }) => {
   return (
     <Grid item xs={12} md={8}>
       <form onSubmit={handleSubmit}>
-        <Box sx={{ display: "flex", gap: 2, width: "100%" }}>
+        <Box
+          sx={{
+            display: "flex",
+            flexDirection: { xs: "column", sm: "row" },
+            gap: 2,
+            width: "100%",
+          }}
+        >
           <Input
             name="name"
             value={form.name}
@@ -67,7 +74,14 @@ const ContactForm = ({ activeTheme }) => {
             onBlur={() => setTouched((prev) => ({ ...prev, message: true }))}
           />
         </Box>
-        <CustomButton text="Enviar Mensagem" type="submit" />
+        <Box
+          sx={{
+            display: "flex",
+            justifyContent: { xs: "center", sm: "flex-start" },
+          }}
+        >
+          <CustomButton text="Enviar Mensagem" type="submit" />
+        </Box>
         {/* <Snackbar
           open={open}
           autoHideDuration={6000}

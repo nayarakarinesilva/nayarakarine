@@ -8,11 +8,11 @@ const Input = ({
   name,
   error,
   helperText,
-  onBlur
+  onBlur,
 }) => {
-
   return (
     <TextField
+      fullWidth
       name={name}
       value={value}
       onChange={onChange}

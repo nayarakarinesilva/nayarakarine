@@ -8,6 +8,7 @@ function Footer() {
     <Box
       sx={{
         display: "flex",
+        flexDirection: { xs: "column", sm: "row" },
         justifyContent: "space-between",
         padding: "30px",
         color: "#666666",
@@ -16,6 +17,7 @@ function Footer() {
       <Box
         sx={{
           display: "flex",
+          flexDirection: { xs: "column", sm: "row" },
           justifyContent: "center",
           alignItems: "center",
           gap: "25px",
@@ -26,11 +28,13 @@ function Footer() {
           &copy; {currentYear} Desenvolvido por Nayara Karine
         </Typography>
       </Box>
-      <Box sx={{
+      <Box
+        sx={{
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
-        }}>
+        }}
+      >
         <Typography>Desenvolvido com ❤️ e muito código</Typography>
       </Box>
     </Box>

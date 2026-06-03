@@ -22,7 +22,10 @@ const Contact = () => {
     >
       <Card
         sx={{
-          width: "1000px",
+          width: {
+            xs: "100%",
+            md: "1000px",
+          },
           height: "auto",
           padding: "20px",
           borderRadius: "40px",
@@ -42,7 +45,7 @@ const Contact = () => {
               : "#910a6721",
         }}
       >
-        <Grid container spacing={6} p={2}>
+        <Grid container spacing={{ xs: 3, md: 6 }} p={{ xs: 1, md: 2 }}>
           {/* Informações */}
           <ContactInfo activeTheme={activeTheme} />
 
