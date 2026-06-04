@@ -1,9 +1,0 @@
-
-:global(.swiper-pagination-bullet) {
-  background-color: #ccc !important;
-  opacity: 1 !important;
-}
-
-:global(.swiper-pagination-bullet-active) {
-  background-color: #832581 !important;
-}

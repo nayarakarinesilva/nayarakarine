@@ -26,38 +26,16 @@ function Navbar() {
     setAnchorEl(null);
   };
 
-  useEffect(() => {
-    function initScrollSoft() {
-      const internalLinks = document.querySelectorAll('.js-menu a[href^="#"]');
+  const handleScroll = (href) => {
+    const section = document.querySelector(href);
 
-      function scrollToSection(event) {
-        event.preventDefault();
-        const href = event.currentTarget.getAttribute("href");
-        const section = document.querySelector(href);
-
-        if (section) {
-          section.scrollIntoView({
-            behavior: "smooth",
-            block: "start",
-          });
-        }
-
-        setIsOpen(false);
-      }
-
-      internalLinks.forEach((link) => {
-        link.addEventListener("click", scrollToSection);
+    if (section) {
+      section.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
       });
-
-      return () => {
-        internalLinks.forEach((link) => {
-          link.removeEventListener("click", scrollToSection);
-        });
-      };
     }
-
-    initScrollSoft();
-  }, []);
+  };
 
   const listMenu = [
     { name: "HOME", href: "#home" },
@@ -67,7 +45,6 @@ function Navbar() {
     { name: "CONTATO", href: "#contact" },
   ];
 
-  // !Ajustar o botão de menu no mobile
   return (
     <>
       <AppBar
@@ -111,6 +88,7 @@ function Navbar() {
             activeTheme={activeTheme}
             listMenu={listMenu}
             isOpen={isOpen}
+            handleScroll={handleScroll}
             sx={{ display: { xs: "none", md: "flex" } }}
           />
           <IconButton onClick={global.toggleTheme} color="inherit">
@@ -122,7 +100,7 @@ function Navbar() {
           </IconButton>
           <IconButton
             onClick={handleOpen}
-            sx={{ display: { xs: "block", md: "none" },color: "#910a67" }}
+            sx={{ display: { xs: "block", md: "none" }, color: "#910a67" }}
           >
             ☰
           </IconButton>
@@ -134,6 +112,7 @@ function Navbar() {
         listMenu={listMenu}
         handleClose={handleClose}
         anchorEl={anchorEl}
+        handleScroll={handleScroll}
       />
     </>
   );

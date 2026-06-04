@@ -7,7 +7,13 @@ import {
 } from "@mui/material";
 import { useState } from "react";
 
-const NavbarMobileMenu = ({ activeTheme, listMenu, handleClose, anchorEl }) => {
+const NavbarMobileMenu = ({
+  activeTheme,
+  listMenu,
+  handleClose,
+  anchorEl,
+  handleScroll,
+}) => {
   const open = Boolean(anchorEl);
 
   return (
@@ -25,14 +31,21 @@ const NavbarMobileMenu = ({ activeTheme, listMenu, handleClose, anchorEl }) => {
           },
         },
       }}
-      // sx={{ mt: 1, zIndex: 1300, left: "-100px" }}
     >
       {listMenu.map((item) => (
         <MenuItem
           key={item.name}
           component="a"
           href={item.href}
-          onClick={handleClose}
+          onClick={(e) => {
+            e.preventDefault();
+            handleClose();
+
+            setTimeout(() => {
+              //Quando menu fechar ele vai até o item do href
+              handleScroll(item.href);
+            }, 100);
+          }}
           sx={{
             color: activeTheme === "lightTheme" ? "#333" : "#FDF2F8",
 

@@ -1,8 +1,9 @@
-import { Box, FormControl, Grid, Snackbar } from "@mui/material";
+import { Box, FormControl, Grid, Snackbar, Typography } from "@mui/material";
 import Input from "../../ui/Input/Input";
 import TextArea from "../../ui/TextArea/TextArea";
 import CustomButton from "../../ui/CustomButton/CustomButton";
 import { useContactForm } from "./hook/useContactForm";
+import { Alert } from "@mui/material";
 
 const ContactForm = ({ activeTheme }) => {
   const {
@@ -13,6 +14,7 @@ const ContactForm = ({ activeTheme }) => {
     errors,
     setTouched,
     touched,
+    isMessageSent,
   } = useContactForm();
 
   return (
@@ -77,18 +79,19 @@ const ContactForm = ({ activeTheme }) => {
         <Box
           sx={{
             display: "flex",
-            justifyContent: { xs: "center", sm: "flex-start" },
+            flexDirection: "column",
+            justifyContent: "center",
+            alignItems: "center",
+            gap: "15px",
           }}
         >
           <CustomButton text="Enviar Mensagem" type="submit" />
+          <Box>
+            {isMessageSent && (
+              <Alert severity="success">Mensagem enviada com sucesso!</Alert>
+            )}
+          </Box>
         </Box>
-        {/* <Snackbar
-          open={open}
-          autoHideDuration={6000}
-          // onClose={handleClose}
-          message="Mensagem enviada com sucesso"
-          // action={action}
-        /> */}
       </form>
     </Grid>
   );

@@ -19,43 +19,51 @@ function AppContent() {
 
   return (
     <Box style={global.themes[activeTheme]}>
-      <Navbar />
-
-      <Divider
+      <Box
         sx={{
-          borderColor:
-            activeTheme === "lightTheme" ? "rgba(0, 0, 0, 0.12)" : "#fff",
+          maxWidth: "1400px",
+          width: "100%",
+          mx: "auto",
         }}
-      />
+      >
+        <Navbar />
 
-      <Box id="home">
-        <About />
+        <Divider
+          sx={{
+            borderColor:
+              activeTheme === "lightTheme" ? "rgba(0, 0, 0, 0.12)" : "#fff",
+          }}
+        />
+
+        <Box id="home">
+          <About />
+        </Box>
+
+        <Box id="skills">
+          <Skills />
+        </Box>
+
+        <Box id="projects" >
+          <Projects />
+        </Box>
+
+        <Box id="experiences">
+          <Experiences />
+        </Box>
+
+        <Box id="contact">
+          <Contact />
+        </Box>
+
+        <Divider
+          sx={{
+            borderColor:
+              activeTheme === "lightTheme" ? "rgba(0, 0, 0, 0.12)" : "#fff",
+          }}
+        />
+
+        <Footer />
       </Box>
-
-      <Box id="skills">
-        <Skills />
-      </Box>
-
-      <Box id="projects" sx={{ paddingTop: { xs: "400px", sm: "20px" } }}>
-        <Projects />
-      </Box>
-
-      <Box id="experiences">
-        <Experiences />
-      </Box>
-
-      <Box id="contact">
-        <Contact />
-      </Box>
-
-      <Divider
-        sx={{
-          borderColor:
-            activeTheme === "lightTheme" ? "rgba(0, 0, 0, 0.12)" : "#fff",
-        }}
-      />
-
-      <Footer />
     </Box>
   );
 }

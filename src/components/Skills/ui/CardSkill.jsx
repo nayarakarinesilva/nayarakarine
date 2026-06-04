@@ -1,5 +1,8 @@
+import { useContext } from "react";
 import { Box, Typography } from "@mui/material";
-const CardSkill = ({ children, icon: Icon, title, activeTheme }) => {
+
+const CardSkill = ({ children, icon: Icon, title,activeTheme }) => {
+
   return (
     <Box
       sx={{
@@ -20,7 +23,7 @@ const CardSkill = ({ children, icon: Icon, title, activeTheme }) => {
           alignItems: "center",
           justifyContent: "center",
           gap: "15px",
-          marginBottom:"25px"
+          marginBottom: "25px",
         }}
       >
         <Box
