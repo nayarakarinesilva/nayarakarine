@@ -17,7 +17,7 @@ export default function Skills() {
       sx={{
         background: activeTheme === "lightTheme" ? "#F9FAFB" : "none",
         padding: "30px",
-        height: "500px",
+        minHeight: "500px",
       }}
     >
       <Box

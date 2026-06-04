@@ -3,6 +3,7 @@ import { sendContactEmail } from "../services/sendContactEmail";
 
 export const useContactForm = () => {
   const [touched, setTouched] = useState(false);
+  const [isMessageSent, setIsMessageSent] = useState(false);
 
   const [form, setForm] = useState({
     name: "",
@@ -75,6 +76,12 @@ export const useContactForm = () => {
       });
 
       setTouched({});
+      setIsMessageSent(true);
+
+      setTimeout(() => {
+        setIsMessageSent(false);
+      }, 3000);
+      
     } catch (error) {
       console.log(error);
     }
@@ -88,5 +95,6 @@ export const useContactForm = () => {
     errors,
     setTouched,
     touched,
+    isMessageSent,
   };
 };

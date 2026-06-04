@@ -1,8 +1,6 @@
 import React, { useState } from "react";
 import ImagesWork from "../../assets/ImageWork";
 import { Box, Typography } from "@mui/material";
-import styles from "./css/Projects.module.css";
-
 
 function ProjectSection({ project, activeTheme }) {
 

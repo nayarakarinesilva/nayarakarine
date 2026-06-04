@@ -67,17 +67,6 @@ export default function About() {
               usuários e geram resultados para seu negócio.
             </Typography>
           </Box>
-          <Box
-            sx={{
-              display: "flex",
-              flexDirection: "row",
-              gap: "15px",
-              pt: "40px",
-            }}
-          >
-            <CustomButton text="Ver Projetos" />
-            <CustomButton text="Download CV" variant="outlined" />
-          </Box>
         </Grid>
 
         <Grid item xs={12} md={6}>
@@ -111,7 +100,7 @@ export default function About() {
                 position: "absolute",
                 width: { xs: 220, md: 350 },
                 maxWidth: 350,
-                right: { xs: "110px", md: 30 },
+                right: { xs: "100px", sm:"150px", md: 0 },
                 top: { xs: "30%", md: "15%" },
                 zIndex: 2,
                 borderRadius: "30px",

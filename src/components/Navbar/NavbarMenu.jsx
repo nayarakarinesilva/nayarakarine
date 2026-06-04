@@ -1,6 +1,6 @@
 import { List, ListItem, ListItemButton, Typography } from "@mui/material";
 
-const NavbarMenu = ({ activeTheme, listMenu, isOpen }) => {
+const NavbarMenu = ({ activeTheme, listMenu, isOpen, handleScroll }) => {
   return (
     <List
       sx={{
@@ -13,6 +13,10 @@ const NavbarMenu = ({ activeTheme, listMenu, isOpen }) => {
         <ListItem key={item.name} disablePadding>
           <ListItemButton
             component="a"
+            onClick={(e) => {
+              e.preventDefault();
+              handleScroll(item.href);
+            }}
             href={item.href}
             sx={{
               letterSpacing: "0.5px",

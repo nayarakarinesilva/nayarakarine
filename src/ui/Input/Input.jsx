@@ -63,6 +63,12 @@ const Input = ({
         "& .MuiFilledInput-input": {
           color: activeTheme === "lightTheme" ? "#333" : "#fff",
         },
+        "& .MuiFilledInput-input:-webkit-autofill": {
+          WebkitBoxShadow: `0 0 0 1000px ${
+            activeTheme === "lightTheme" ? "#FFF" : "#1B1C1C"
+          } inset`,
+          WebkitTextFillColor: activeTheme === "lightTheme" ? "#333" : "#fff",
+        },
       }}
     />
   );
