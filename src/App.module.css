@@ -1,37 +1,18 @@
-body {
+* {
   font-family: Arial, sans-serif;
+}
+
+html, body {
+  height: 100%;
   margin: 0;
-  padding: 0;
-  /* background-color: #eeedeb; */
+}
+
+body.lightTheme {
+  background-color: #fff;
   color: #333;
 }
 
-.App {
-  text-align: center;
-}
-
-/* Media Queries */
-@media (max-width: 768px) {
-  .App {
-    padding: 10px;
-  }
-}
-
-@media (max-width: 768px) {
-  body {
-    font-size: 14px;
-  }
-}
-
-@media (max-width: 480px) {
-  body {
-    font-size: 12px;
-  }
-}
-
-@media (prefers-colo-scheme: dark) {
-  body {
-    background-color: #333;
-    color: #eeedeb;
-  }
+body.darkTheme {
+  background-color: #1b1c1c;
+  color: #fff;
 }

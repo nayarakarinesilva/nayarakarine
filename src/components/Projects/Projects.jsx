@@ -1,27 +1,95 @@
-import React, { useState } from "react"; // Import useState
-import projectsData from "../../ProjectsData.json";
-import styles from "./Projects.module.css";
+import React, { useContext } from "react";
+import projectsData from "./data/projectsData.json";
+import { Box } from "@mui/material";
+
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Pagination } from "swiper/modules";
+
+import { IconButton } from "@mui/material";
+import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
+import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
+
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
 import ProjectSection from "./ProjectsSections";
+import Title from "../../ui/Title/Title";
+import { GlobalContext } from "../../context/GlobalContext";
 
 export default function Projects() {
+  const { activeTheme } = useContext(GlobalContext);
+
   const { front, back, fullstack } = projectsData.projects;
 
   const sections = [
-    { id: "front", title: "Projetos de Front-end", projects: front },
-    { id: "fullstack", title: "Projetos de FullStack", projects: fullstack },
-    { id: "back", title: "Projetos de Back-end", projects: back },
+    { id: "front", title: "Front-end", projects: front },
+    { id: "fullstack", title: "FullStack", projects: fullstack },
+    { id: "back", title: "Back-end", projects: back },
   ];
 
   return (
-    <div className={styles.projects_container}>
-      <h1>Projetos</h1>
-      {sections.map((section, index) => (
-        <ProjectSection
-          key={index}
-          title={section.title}
-          projects={section.projects}
-        />
-      ))}
-    </div>
+    <Box sx={{ display: "flex", flexDirection: "column", padding: 4 }}>
+      <Title text="Projetos" />
+
+      <Box sx={{ position: "relative", width: "100%" }}>
+        <IconButton
+          className="prev"
+          sx={{
+            position: "absolute",
+            top: "50%",
+            left: 10,
+            zIndex: 10,
+            transform: "translateY(-50%)",
+            backgroundColor: "#fff",
+            "&:hover": { backgroundColor: "#f3f3f3" },
+          }}
+        >
+          <ArrowBackIosNewIcon sx={{ color: "#910a67" }} />
+        </IconButton>
+
+        <IconButton
+          className="next"
+          sx={{
+            position: "absolute",
+            top: "50%",
+            right: 10,
+            zIndex: 10,
+            transform: "translateY(-50%)",
+            backgroundColor: "#fff",
+            "&:hover": { backgroundColor: "#f3f3f3" },
+          }}
+        >
+          <ArrowForwardIosIcon sx={{ color: "#910a67" }} />
+        </IconButton>
+        <Swiper
+          spaceBetween={20}
+          navigation={{
+            prevEl: ".prev",
+            nextEl: ".next",
+          }}
+          pagination={{ clickable: true }}
+          modules={[Navigation, Pagination]}
+          breakpoints={{
+            0: {
+              slidesPerView: 1,
+            },
+            768: {
+              slidesPerView: 2,
+            },
+            1200: {
+              slidesPerView: 3,
+            },
+          }}
+        >
+          {sections.map((section) =>
+            section.projects.map((project, index) => (
+              <SwiperSlide key={`${section.id}-${index}`}>
+                <ProjectSection project={project} activeTheme={activeTheme} />
+              </SwiperSlide>
+            )),
+          )}
+        </Swiper>
+      </Box>
+    </Box>
   );
 }

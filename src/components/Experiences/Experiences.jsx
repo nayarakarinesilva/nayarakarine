@@ -1,69 +1,91 @@
-import styles from "./Experiences.module.css";
+import React, { useContext } from "react";
+import { Box, Chip, Divider, Typography } from "@mui/material";
+import { Description } from "@mui/icons-material";
+import mapExperiences from "./data/experiencesData";
+import Title from "../../ui/Title/Title";
+import { GlobalContext } from "../../context/GlobalContext";
 
 function Experiences() {
+  const { activeTheme } = useContext(GlobalContext);
+
   return (
-    <div className={styles.experiences_container}>
-      <h1>Experiências</h1>
+    <Box sx={{ display: "flex", flexDirection: "column", paddingTop: "80px" }}>
+      <Title text="Experiências" />
+      <Divider />
+      <Box
+        sx={{
+          display: "grid",
 
-      <section>
-        <div>
-          <h2>Experiência Profissional</h2>
-          <ul>
-            <li>
-              <strong>ProBrain</strong>, Sorocaba - SP –{" "}
-              <em>Estágio em Front-End</em> –{" "}
-              <span>Outubro de 2024 – Atual</span>
-            </li>
-
-            <li>
-              <strong>AgBe Soluções LTDA</strong>, Campinas - SP –{" "}
-              <em>Estágio em Full Stack</em> –{" "}
-              <span>Abril de 2024 – Setembro de 2024</span>
-            </li>
-
-            <li>
-              <strong>Ritnner Odontologia</strong>, Campinas – SP –{" "}
-              <em>Auxiliar de Saúde Bucal</em> –{" "}
-              <span>Maio de 2022 – Março de 2024</span>
-            </li>
-
-            <li>
-              <strong>We Smile</strong>, Campinas – SP –{" "}
-              <em>Auxiliar de Saúde Bucal</em> –{" "}
-              <span>Março de 2021 – Abril de 2022</span>
-            </li>
-          </ul>
-        </div>
-        <div>
-          <h2>Atividades Extracurriculares</h2>
-          <ul>
-            <li>
-              <strong>JavaScript / HTML5 / CSS3 / Java</strong> – Curso em Vídeo
-              – <em>Agosto 2023</em>
-            </li>
-
-            <li>
-              <strong>Bootcamp Elas Tech BACKEND</strong> – Java, MySQL –{" "}
-              <em>Março 2024</em>
-            </li>
-
-            <li>
-              <strong>Programa Desenvolvedor FRONTEND</strong> – ONE (Oracle
-              Next Education) com Alura – <em>Fevereiro 2024</em>
-            </li>
-
-            <li>
-              <strong>JavaScript / TypeScript / React.js / Figma</strong> –
-              Origamid – <em>2024</em>
-            </li>
-
-            <li>
-              <strong>Figma</strong> – Sujeito Programador – <em>2024</em>
-            </li>
-          </ul>
-        </div>
-      </section>
-    </div>
+          gridTemplateColumns: {
+            xs: "1fr",
+            sm: "repeat(2, 1fr)",
+            lg: "repeat(4, 1fr)",
+          },
+          gap: 2,
+          padding: "20px",
+        }}
+      >
+        {mapExperiences.map((item) => (
+          <Box
+            key={item.id}
+            sx={{ display: "flex", flexDirection: "column", gap: 2 }}
+          >
+            <Box
+              sx={{
+                background: item.backgroundChip,
+                width: 24,
+                height: 24,
+                borderRadius: "50%",
+              }}
+            />
+            <Box
+              key={item.id}
+              sx={{
+                display: "flex",
+                flexDirection: "column",
+                gap: "15px",
+                flex: 1,
+                borderRadius: "10px",
+                padding: "20px",
+                border:
+                  activeTheme === "lightTheme"
+                    ? "solid 1px #F3F4F6"
+                    : "solid 1px #910a67",
+                background: activeTheme === "lightTheme" ? "none" : "#910a6721",
+              }}
+            >
+              <Box>
+                <Chip
+                  label={item.year}
+                  sx={{
+                    background: item.backgroundChip,
+                    color: item.color,
+                    fontWeight: 600,
+                  }}
+                />
+              </Box>
+              <Typography
+                sx={{
+                  fontSize: "14px",
+                  fontWeight: 600,
+                  color: activeTheme === "lightTheme" ? "#333333" : "#FDF2F8",
+                }}
+              >
+                {item.title}
+              </Typography>
+              <Typography
+                sx={{
+                  fontSize: "12px",
+                  color: activeTheme === "lightTheme" ? "#666666" : "#FDF2F8",
+                }}
+              >
+                {item.description}
+              </Typography>
+            </Box>
+          </Box>
+        ))}
+      </Box>
+    </Box>
   );
 }
 
