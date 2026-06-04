@@ -54,6 +54,7 @@ function Navbar() {
           color: activeTheme === "lightTheme" ? "#333" : "#FDF2F8",
           boxShadow: "none",
           marginBottom: "6px",
+          marginTop:"15px"
         }}
       >
         <Toolbar
