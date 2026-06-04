@@ -1,4 +1,5 @@
 import React, { useContext } from "react";
+import "./css/Projects.module.css"
 import projectsData from "./data/projectsData.json";
 import { Box } from "@mui/material";
 
