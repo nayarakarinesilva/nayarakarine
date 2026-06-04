@@ -1,7 +1,10 @@
 import { useContext } from "react";
 import { Box, Typography } from "@mui/material";
+import { GlobalContext } from "../../../context/GlobalContext";
 
-const CardSkill = ({ children, icon: Icon, title,activeTheme }) => {
+
+const CardSkill = ({ children, icon: Icon, title }) => {
+  const { activeTheme } = useContext(GlobalContext);
 
   return (
     <Box

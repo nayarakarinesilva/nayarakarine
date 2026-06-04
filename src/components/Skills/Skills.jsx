@@ -38,7 +38,6 @@ export default function Skills() {
           <CardSkill
             icon={CodeIcon}
             title={"Front-end"}
-            activeTheme={activeTheme}
           >
             {frontSkills.map((item) => (
               <CardSkillInfo
@@ -55,7 +54,6 @@ export default function Skills() {
           <CardSkill
             icon={SettingsSuggestIcon}
             title={"Ferramentas"}
-            activeTheme={activeTheme}
           >
             {toolsSkills.map((item) => (
               <CardSkillInfo
