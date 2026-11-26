@@ -1,8 +1,9 @@
+
 {
-  "name": "react",
+  "name": "nayara-karine-portfolio",
   "version": "1.0.0",
-  "description": "",
-  "keywords": [],
+  "description": "Portfólio pessoal desenvolvido com React e Vite",
+  "private": true,
   "dependencies": {
     "@emotion/react": "^11.14.0",
     "@emotion/styled": "^11.14.1",
@@ -14,24 +15,16 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.30.3",
-    "react-scripts": "5.0.1",
     "react-slick": "0.30.2",
     "swiper": "^12.1.4"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
   },
-  "browserslist": [
-    ">0.2%",
-    "not dead",
-    "not ie <= 11",
-    "not op_mini all"
-  ],
-  "allowScripts": {
-    "core-js@3.49.0": true,
-    "core-js-pure@3.49.0": true
+  "devDependencies": {
+    "@vitejs/plugin-react": "^6.3.0",
+    "vite": "^8.4.0"
   }
 }
