@@ -13,9 +13,13 @@ import React from "../assets/imageSkills/react-logo.png";
 import VueJs from "../assets/imageSkills/vueJs-logo.webp";
 import Mui from "../assets/imageSkills/mui-logo.png";
 import Antdesign from "../assets/imageSkills/antdesign-logo.png";
+import NextJs from "../assets/imageSkills/nextJs-logo.png";
+import Storybook from "../assets/imageSkills/storybook-logo.webp";
+import ReactHookForm from "../assets/imageSkills/reactHookForm-logo.svg";
+import Zustand from "../assets/imageSkills/zustand-logo.jpg";
+import TanStack from "../assets/imageSkills/tanStackQuery-logo.svg";
 
 const Images = {
-  canva: Canva,
   css3: CSS,
   figma: Figma,
   git: Git,
@@ -23,12 +27,17 @@ const Images = {
   html5: HTML5,
   javascript: JavaScript,
   typescript: TypeScript,
-  mysql: MySql,
-  postman: Postman,
+  // mysql: MySql,
+  // postman: Postman,
   react: React,
-  vuejs: VueJs,
+  // vuejs: VueJs,
   mui: Mui,
   antdesign: Antdesign,
+  nextJs: NextJs,
+  zustand: Zustand,
+  tanStack: TanStack,
+  reactHookForm: ReactHookForm,
+  storybook: Storybook,
 };
 
 export default Images;

@@ -7,13 +7,13 @@ export const contactData = [
   {
     id: "email",
     icon: <EmailOutlinedIcon style={{ color: "#910a67" }} fontSize="small" />,
-    description: "nayarakarine.@gmail.com",
-    link: "mailto:nayarakarine@gmail.com",
+    description: "nayarakarine.s.oliveira.@gmail.com",
+    link: "mailto:nayarakarine.s.oliveira.@gmail.com",
   },
   {
     id: "linkedin",
     icon: <LinkedInIcon style={{ color: "#910a67" }} fontSize="small" />,
-    description: "linkedin.com/in/nayarakarine",
+    description: "linkedin.com/in/nayarakarine-silva",
     link: "https://www.linkedin.com/in/nayarakarine-silva/",
   },
   {

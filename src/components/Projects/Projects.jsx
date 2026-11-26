@@ -76,7 +76,7 @@ export default function Projects() {
             768: {
               slidesPerView: 2,
             },
-            1200: {
+            1024: {
               slidesPerView: 3,
             },
           }}
