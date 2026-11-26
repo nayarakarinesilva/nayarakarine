@@ -25,22 +25,47 @@ Este é meu portfólio pessoal desenvolvido com **React**, onde apresento meus p
 ## 📁 Estrutura do Projeto
 
 ```bash
-src/
-├── assets/                 # Imagens e ícones
-├── components/             # Componentes da aplicação
-│   ├── About/
-│   ├── Contact/
-│   ├── Experiences/
-│   ├── Footer/
-│   ├── Navbar/
-│   ├── Projects/
-│   └── Skills/
-├── context/
-│   └── GlobalContext.js    # Gerenciamento global de tema
-├── ui/                     # Componentes reutilizáveis
-├── App.jsx                 # Componente principal
-├── main.jsx                # Ponto de entrada da aplicação
-└── index.css               # Estilos globais
+├── public/
+│   └── ...
+├── src/
+│   ├── assets/
+│   │   ├── images/
+│   │   └── icons/
+│   │
+│   ├── components/
+│   │   ├── About/
+│   │   ├── Contact/
+│   │   ├── Experiences/
+│   │   ├── Footer/
+│   │   ├── Navbar/
+│   │   ├── Projects/
+│   │   └── Skills/
+│   │
+│   ├── context/
+│   │   └── GlobalContext.jsx
+│   │
+│   ├── data/
+│   │   ├── projects.json
+│   │   ├── skills.json
+│   │   └── experiences.json
+│   │
+│   ├── theme/
+│   │   └── theme.js
+│   │
+│   ├── ui/
+│   │   ├── Button/
+│   │   ├── Card/
+│   │   └── ...
+│   │
+│   ├── App.jsx
+│   ├── App.module.css
+│   └── index.js
+│
+├── .eslintrc.json
+├── .gitignore
+├── package.json
+├── package-lock.json
+└── README.md
 ```
 
 ## 🌐 Acesse o Projeto Online
