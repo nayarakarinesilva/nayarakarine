@@ -7,8 +7,8 @@ import { Typography, Box, MenuItem, Menu } from "@mui/material";
 import IconButton from "@mui/material/IconButton";
 import DarkModeIcon from "@mui/icons-material/DarkMode";
 import LightModeIcon from "@mui/icons-material/LightMode";
-import NavbarMenu from "./NavbarMenu";
-import NavbarMobileMenu from "./NavbarMobileMenu";
+import NavbarMenu from "./components/NavbarMenu";
+import NavbarMobileMenu from "./components/NavbarMobileMenu";
 import { GlobalContext } from "../../context/GlobalContext";
 
 function Navbar() {

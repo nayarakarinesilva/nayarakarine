@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import ImagesWork from "../../assets/ImageWork";
+import ImagesWork from "../../../assets/ImageWork";
 import { Box, Typography } from "@mui/material";
 
 function ProjectSection({ project, activeTheme }) {

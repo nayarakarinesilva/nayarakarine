@@ -1,5 +1,5 @@
 import { Box, Typography } from "@mui/material";
-import { contactData } from "./data/contactData";
+import { contactData } from "../data/contactData";
 
 const ContactInfoItem = ({ activeTheme }) => {
   return (

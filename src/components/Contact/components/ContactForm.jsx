@@ -1,8 +1,8 @@
 import { Box, FormControl, Grid, Snackbar, Typography } from "@mui/material";
-import Input from "../../ui/Input/Input";
-import TextArea from "../../ui/TextArea/TextArea";
-import CustomButton from "../../ui/CustomButton/CustomButton";
-import { useContactForm } from "./hook/useContactForm";
+import Input from "../../../ui/Input/Input";
+import TextArea from "../../../ui/TextArea/TextArea";
+import CustomButton from "../../../ui/CustomButton/CustomButton";
+import { useContactForm } from "../hook/useContactForm";
 import { Alert } from "@mui/material";
 
 const ContactForm = ({ activeTheme }) => {
