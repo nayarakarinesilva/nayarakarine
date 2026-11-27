@@ -53,7 +53,7 @@ export default function Skills() {
         <Grid item xs={16} md={8}>
           <CardSkill
             icon={SettingsSuggestIcon}
-            title={"Ferramentas"}
+            title={"Ferramentas e bibliotecas"}
           >
             {toolsSkills.map((item) => (
               <CardSkillInfo

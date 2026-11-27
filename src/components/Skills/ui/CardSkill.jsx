@@ -10,7 +10,7 @@ const CardSkill = ({ children, icon: Icon, title }) => {
     <Box
       sx={{
         padding: "20px",
-        minHeight: { xs: "auto", sm: "300px" },
+        minHeight: { xs: "auto", sm: "350px" },
         border:
           activeTheme === "lightTheme"
             ? "solid 1px #F3F4F6"

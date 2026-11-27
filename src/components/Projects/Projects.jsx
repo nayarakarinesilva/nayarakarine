@@ -12,7 +12,7 @@ import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-import ProjectSection from "./ProjectsSections";
+import ProjectSection from "./components/ProjectsSections";
 import Title from "../../ui/Title/Title";
 import { GlobalContext } from "../../context/GlobalContext";
 
@@ -76,7 +76,7 @@ export default function Projects() {
             768: {
               slidesPerView: 2,
             },
-            1200: {
+            1024: {
               slidesPerView: 3,
             },
           }}

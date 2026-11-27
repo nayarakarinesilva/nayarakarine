@@ -6,14 +6,17 @@ export const frontSkills = [
   { name: "JavaScript", img: Images.javascript },
   { name: "TypeScript", img: Images.typescript },
   { name: "React", img: Images.react },
-  { name: "VueJs", img: Images.vuejs },
+  { name: "Next.js", img: Images.nextJs },
   { name: "Material UI", img: Images.mui },
-  { name: "Figma", img: Images.figma },
+  { name: "Ant Design", img: Images.antdesign },
 ];
 
 export const toolsSkills = [
-  { name: "MySql", img: Images.mysql },
-  { name: "Postman", img: Images.postman },
+  { name: "Zustand", img: Images.zustand },
+  { name: "TanStack Query", img: Images.tanStack },
+  { name: "React Hook Form", img: Images.reactHookForm },
+  { name: "Storybook", img: Images.storybook },
+  { name: "Figma", img: Images.figma },
   { name: "Git", img: Images.git },
   { name: "GitHub", img: Images.github },
 ];

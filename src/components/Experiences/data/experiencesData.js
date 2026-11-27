@@ -31,9 +31,9 @@ const mapExperiences = [
     year: "Atual",
     backgroundChip: "#FCE7F3",
     color: "#910a67",
-    title: "ProBrain - Estágio em Front-End",
+    title: "ProBrain - Desenvolvedora Front-end Júnior I",
     description:
-      "Desenvolvimento de interfaces com JavaScript, React, TypeScript, MUI e Ant Design, focando em componentização e boas práticas.",
+      "Desenvolvimento e manutenção de aplicações web com React, Next.js, JavaScript e TypeScript, utilizando bibliotecas como MUI e Ant Design, com foco em componentização, reutilização de código e boas práticas.",
   },
 ];
 export default mapExperiences;

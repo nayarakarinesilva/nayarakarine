@@ -1,8 +1,8 @@
 import React, { useState, useContext } from "react";
 import { Box, Card, Grid } from "@mui/material";
 
-import ContactForm from "./ContactForm";
-import ContactInfo from "./ContactInfo";
+import ContactForm from "./components/ContactForm";
+import ContactInfo from "./components/ContactInfo";
 import { GlobalContext } from "../../context/GlobalContext";
 
 const Contact = () => {

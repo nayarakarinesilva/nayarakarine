@@ -58,13 +58,15 @@ export default function About() {
             }}
           >
             <Typography>
-              Estudante de Engenharia de Software apaixonada por criar
-              interfaces intuitivas, acessíveis e funcionais.
+              Sou desenvolvedora Front-end e estudante de Engenharia de
+              Software, apaixonada por tecnologia e pela criação de interfaces
+              intuitivas, acessíveis e funcionais.
             </Typography>
             <Typography>
-              Tenho experiência com JavaScript, HTML, CSS e estou aprofundando
-              meus conhecimentos em UX para entregar soluções que encantam
-              usuários e geram resultados para seu negócio.
+              Tenho experiência com React e JavaScript e atualmente estou
+              aprofundando meus conhecimentos em Next.js, TypeScript e
+              arquitetura Front-end, buscando evoluir continuamente como
+              desenvolvedora.
             </Typography>
           </Box>
         </Grid>
@@ -100,7 +102,7 @@ export default function About() {
                 position: "absolute",
                 width: { xs: 220, md: 350 },
                 maxWidth: 350,
-                right: { xs: "100px", sm:"150px", md: 0 },
+                right: { xs: "100px", sm: "150px", md: 0 },
                 top: { xs: "30%", md: "15%" },
                 zIndex: 2,
                 borderRadius: "30px",

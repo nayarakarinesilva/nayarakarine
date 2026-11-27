@@ -29,43 +29,79 @@ Este é meu portfólio pessoal desenvolvido com **React**, onde apresento meus p
 │   └── ...
 ├── src/
 │   ├── assets/
-│   │   ├── images/
-│   │   └── icons/
+│   │   ├── imagePerfil/
+│   │   ├── imageSkills/
+│   │   ├── imageNetwork/
+│   │   ├── imageWork/
+│   │   ├── imageSkills/
+│   │   └── logo.svg
 │   │
 │   ├── components/
 │   │   ├── About/
+│   │   │   └── About.jsx
+│   │   │
 │   │   ├── Contact/
+│   │   │   ├── components/
+│   │   │   │   ├── ContactForm.jsx
+│   │   │   │   ├── ContactInfo.jsx
+│   │   │   │   └── ContactInfoItem.jsx
+│   │   │   ├── data/
+│   │   │   │   └── contactData.js
+│   │   │   ├── hooks/
+│   │   │   │   └── useContactForm.js
+│   │   │   ├── services/
+│   │   │   │   └── sendContactEmail.js
+│   │   │   └── Contact.jsx
+│   │   │
 │   │   ├── Experiences/
+│   │   │   ├── data/
+│   │   │   │   └── experiencesData.js
+│   │   │   └── Experiences.jsx
+│   │   │
 │   │   ├── Footer/
+│   │   │   └── Footer.jsx
+│   │   │
 │   │   ├── Navbar/
+│   │   │   ├── components/
+│   │   │   │   ├── NavbarMenu.jsx
+│   │   │   │   └── NavbarMobileMenu.jsx
+│   │   │   └── Navbar.jsx
+│   │   │
 │   │   ├── Projects/
+│   │   │   ├── components/
+│   │   │   │   └── ProjectsSections.jsx
+│   │   │   ├── data/
+│   │   │   │   └── projectsData.json
+│   │   │   └── Projects.jsx
+│   │   │
 │   │   └── Skills/
+│   │       ├── constants/
+│   │       │   └── Skills.js
+│   │       ├── ui/
+│   │       │   ├── CardSkill.jsx
+│   │       │   └── CardSkillInfo.jsx
+│   │       └── Skills.jsx
 │   │
 │   ├── context/
 │   │   └── GlobalContext.jsx
 │   │
-│   ├── data/
-│   │   ├── projects.json
-│   │   ├── skills.json
-│   │   └── experiences.json
-│   │
-│   ├── theme/
-│   │   └── theme.js
-│   │
 │   ├── ui/
-│   │   ├── Button/
-│   │   ├── Card/
-│   │   └── ...
+│   │   ├── CustomButton/
+│   │   ├── Input/
+│   │   ├── TextArea/
+│   │   └── Title/
 │   │
 │   ├── App.jsx
 │   ├── App.module.css
-│   └── index.js
+│   └── index.jsx
 │
 ├── .eslintrc.json
 ├── .gitignore
-├── package.json
+├── index.html
 ├── package-lock.json
-└── README.md
+├── package.json
+├── README.md
+└── vite.config.js
 ```
 
 ## 🌐 Acesse o Projeto Online
